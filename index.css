@@ -1,0 +1,158 @@
+body {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 20px;
+  color: #121212;
+  color: #121212;
+}
+body header {
+  width: 100%;
+  padding: 30px 54px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  z-index: 9999;
+  color: #fff;
+}
+body header h1 {
+  background: url(./images/logo.png) no-repeat 50%/cover;
+  width: 250px;
+  height: 131px;
+  text-indent: -9999px;
+}
+body header h1 a {
+  width: 100%;
+  height: 100%;
+}
+body header #gnb {
+  width: 500px;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+body main .mainTitle {
+  color: #fff;
+  background: #121212 url(./images/mainTitleBg.png) no-repeat 50%/cover;
+  height: 100vh;
+  z-index: -1;
+}
+body main .mainTitle .mainTitleWrapper {
+  position: relative;
+}
+body main .mainTitle .mainTitleWrapper .titleText {
+  position: relative;
+  max-width: 1920px;
+  height: 100vh;
+}
+body main .mainTitle .mainTitleWrapper .titleText img {
+  transform: scale(0.5);
+  position: absolute;
+}
+body main .mainTitle .mainTitleWrapper .titleText img:first-child {
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+body main .mainTitle .mainTitleWrapper .year {
+  font-size: 50px;
+  font-weight: 500;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: default;
+}
+body main .mainTitle .mainTitleWrapper .title {
+  text-align: center;
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: default;
+}
+body main .mainTitle .mainTitleWrapper .title .titleName {
+  font-size: 84px;
+  font-weight: 700;
+}
+body main .mainTitle .mainTitleWrapper .title .titlePf {
+  font-size: 72px;
+  font-family: "Italiana", serif;
+  font-weight: 400;
+}
+body main .mainTitle .mainTitleWrapper .scrollWrapper {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: default;
+}
+body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon {
+  text-indent: -9999px;
+  position: relative;
+  height: 47px;
+}
+body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollCircle {
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-indent: -9999px;
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollBar {
+  width: 23px;
+  height: 47px;
+  border: 1px #fff solid;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollDown {
+  font-size: 14px;
+  margin-top: 10px;
+}
+body main .mainTitle .mainTitleWrapper .email {
+  width: 270px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 20px 54px;
+  text-align: center;
+  border: 1px #fff solid;
+  border-radius: 20px;
+  background-color: rgba(18, 18, 18, 0.5254901961);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  cursor: default;
+}
+body main .mainTitle .mainTitleWrapper .copyRight {
+  font-size: 16px;
+  margin: 0 54px 20px 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: default;
+}
+body .mainFixedBar {
+  width: 467px;
+  height: 100vh;
+  border-right: 1px #121212 solid;
+  padding: 54px;
+}
+body .mainFixedBar .contactBtn {
+  background-color: #121212;
+  color: #fff;
+  width: 245px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  border-radius: 50px;
+}
+body .mainFixedBar .contactBtn span {
+  font-size: 24px;
+}

@@ -1,0 +1,183 @@
+// 변수
+$colorBlack: #121212;
+
+@mixin primaryFont {
+  font : {
+    family: 'Pretendard';
+    weight: 400;
+    size: 20px;
+  }
+  color: $colorBlack;
+}
+
+// css
+body {
+  @include primaryFont;
+  color: $colorBlack;
+
+  header {
+    width: 100%;
+    padding: 30px 54px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 9999;
+    color: #fff;
+    h1 {
+      background: url(./images/logo.png) no-repeat 50% / cover;
+      width: 250px;
+      height: 131px;
+      text-indent: -9999px;
+      a {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    #gnb {
+      width: 500px;
+      font-size: 24px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  main {
+    .mainTitle {
+      color: #fff;
+      background: $colorBlack url(./images/mainTitleBg.png) no-repeat 50% / cover;
+      height: 100vh;
+      z-index: -1;
+      .mainTitleWrapper {
+        position: relative;
+        .titleText {
+          position: relative;
+          // width: 100%;
+          max-width: 1920px;
+          height: 100vh;
+          img {
+            transform: scale(0.5);
+            position: absolute;
+            &:first-child {
+              top: 0;
+              left: 0;
+              z-index: 999;
+            }
+          }
+        }
+        .year {
+          font-size: 50px;
+          font-weight: 500;
+
+          position: absolute;
+          top: 5%;
+          left: 50%;
+          transform: translateX(-50%);
+
+          cursor: default;
+        }
+        .title {
+          text-align: center;
+          width: 500px;
+          height: 200px;
+
+          position: absolute;
+          bottom: 12%;
+          left: 50%;
+          transform: translateX(-50%);
+
+          cursor: default;
+          .titleName {
+            font-size: 84px;
+            font-weight: 700;
+          }
+          .titlePf {
+            font-size: 72px;
+            font-family: 'Italiana', serif;
+            font-weight: 400;
+          }
+        }
+        .scrollWrapper {
+          position: absolute;
+          bottom: 3%;
+          left: 50%;
+          transform: translateX(-50%);
+          cursor: default;
+          .scrollIcon {
+            text-indent: -9999px;
+            position: relative;
+            height: 47px;
+            .scrollCircle {
+              width: 17px;
+              height: 17px;
+              background-color: #fff;
+              border-radius: 50%;
+              text-indent: -9999px;
+
+              position: absolute;
+              top: 3px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+            .scrollBar {
+              width: 23px;
+              height: 47px;
+              border: 1px #fff solid;
+              border-radius: 20px;
+              margin: 0 auto;
+            }
+          }
+          .scrollDown {
+            font-size: 14px;
+            margin-top: 10px;
+          }
+        }
+        .email {
+          width: 270px;
+          height: 40px;
+          line-height: 40px;
+          margin: 0 0 20px 54px;
+
+          text-align: center;
+          border: 1px #fff solid;
+          border-radius: 20px;
+          background-color: #12121286;
+
+          position: absolute;
+          bottom: 0;
+          left: 0;
+
+          cursor: default;
+        }
+        .copyRight {
+          font-size: 16px;
+          margin: 0 54px 20px 0;
+
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+          cursor: default;
+        }
+      }
+    }
+  }
+  .mainFixedBar {
+    width: 467px;
+    height: 100vh;
+    border-right: 1px $colorBlack solid;
+    padding: 54px;
+    .contactBtn {
+      background-color: $colorBlack;
+      color: #fff;
+      width: 245px;
+      height: 65px;
+      line-height: 65px;
+      text-align: center;
+      border-radius: 50px;
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+}
