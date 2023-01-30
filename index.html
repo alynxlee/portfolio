@@ -9,12 +9,11 @@
     <!-- webfont cdn -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet" />
     <!-- fonts.css -->
     <link rel="stylesheet" href="./fonts.css" />
+    <!-- swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!-- style.css -->
     <link rel="stylesheet" href="./index.css" />
     <title>LeeHyeJin Portfolio</title>
@@ -24,13 +23,12 @@
 
     <!-- logo -->
     <header>
-      <h1 id="logo"><a href="/">logo</a></h1>
       <!-- nav -->
       <ul id="gnb">
         <li><a href="#">WORK</a></li>
         <li><a href="#">ABOUT</a></li>
-        <li><a href="#">GITHUB</a></li>
-        <li><a href="#">BLOG</a></li>
+        <li><a href="https://github.com/alynxlee" target="_blank">GITHUB</a></li>
+        <li><a href="https://alynxlee.tistory.com/" target="_blank">BLOG</a></li>
       </ul>
     </header>
 
@@ -40,6 +38,7 @@
     <main>
       <article class="mainTitle">
         <div class="mainTitleWrapper">
+          <h1 id="logo"><a href="/">logo</a></h1>
           <div class="titleText">
             <img src="./images/mainTitleEl/el1.png" alt="f" />
             <img src="./images/mainTitleEl/el2.png" alt="r" />
@@ -62,8 +61,8 @@
           </div>
           <div class="year">2023</div>
           <div class="title">
-            <span class="titleName"> LEE HYEJIN </span>
-            <span class="titlePf">portfolio</span>
+            <div class="titleName">LEE HYEJIN</div>
+            <div class="titlePf">portfolio</div>
           </div>
           <div class="scrollWrapper">
             <div class="scrollIcon">
@@ -72,32 +71,73 @@
             </div>
             <div class="scrollDown">Scroll Down</div>
           </div>
-          <div class="email">alynxlee2@gmail.com</div>
-          <div class="copyRight">
-            &copy;2023 Lee HyeJin. All rights reserved
-          </div>
+          <div class="email"><a href="mailto:alynxlee2@gmail.com">alynxlee2@gmail.com</a></div>
+          <div class="copyRight">&copy;2023 Lee HyeJin. All rights reserved</div>
         </div>
       </article>
 
-      <!-- mainFixedBar -->
-      <article class="mainFixedBar">
-        <div class="mainFixedBarWarpper">
-          <h2 class="fixedBarLogo">logo</h2>
-          <div class="contactBtn"><span>contact</span></div>
-          <div class="copyRight">
-            &copy;2023 Lee HyeJin. All rights reserved
+      <div class="mainContainer">
+        <!-- mainFixedBar -->
+        <article class="mainFixedBar">
+          <div class="mainFixedBarWarpper">
+            <h2 class="fixedBarLogo">logo</h2>
+            <div>
+              <div class="contactBtn">
+                <span><a href="mailto:alynxlee2@gmail.com">contact</a></span>
+              </div>
+              <div class="copyRight">&copy;2023 Lee HyeJin. All rights reserved</div>
+            </div>
           </div>
+        </article>
+
+        <!-- mainWork -->
+        <div class="mainContents">
+          <article class="mainWork">
+            <h3 class="workTitle">WORK</h3>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/mainWork1.png" alt="project1" />
+                  <div class="desWrapper">
+                    <div class="projectNum">01</div>
+                    <div class="projectTitle">법무법인 화우</div>
+                    <div class="projectDes">팀 프로젝트 / 웹 사이트 구현</div>
+                    <ul class="projectLang">
+                      <li>HTML5</li>
+                      <li>CSS3</li>
+                      <li>JAVASCRIPT</li>
+                    </ul>
+                    <button>View More</button>
+                  </div>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </article>
+
+          <!-- mainAbout -->
+          <article class="mainAbout"><h3>ABOUT</h3></article>
+          <!-- mainSkills -->
         </div>
-      </article>
-
-      <!-- mainWork -->
-
-      <!-- mainAbout -->
-
-      <!-- mainSkills -->
-
+      </div>
       <!-- mainContact -->
     </main>
     <!---------- footer ---------->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+        },
+      });
+    </script>
   </body>
 </html>
