@@ -64,7 +64,7 @@ body {
 
       .mainTitleWrapper {
         position: relative;
-        height: 100vh;
+        height: 100%;
         overflow: hidden;
         h1 {
           background: url(./images/logo.png) no-repeat 50% / cover;
@@ -284,18 +284,15 @@ body {
 
   .mainContainer {
     position: relative;
+    height: 5000px;
     .mainFixedBar {
-      // position: fixed;
-      // margin-top: 100px;
       position: -webkit-sticky;
       position: sticky;
-
       z-index: 1;
       top: 0;
-      left: 0;
       background-color: #fff;
-      width: 467px;
-      // height: 100%;
+      width: 25%;
+      height: 100vh;
       border-right: 1px $colorBlack solid;
       padding: 54px;
       .mainFixedBarWarpper {
@@ -381,19 +378,23 @@ body {
                 font-size: 30px;
                 font-weight: 700;
                 color: #333;
+                margin-bottom: 10px;
               }
               .projectTitle {
                 font-size: 40px;
-                font-weight: 600;
+                font-weight: 700;
+                margin-bottom: 20px;
               }
               .projectDes {
                 font-size: 16px;
                 font-weight: 600;
+                margin-bottom: 50px;
               }
               .projectLang {
                 width: 200px;
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 20px;
                 li {
                   font-size: 14px;
                   font-weight: 600;
@@ -415,13 +416,14 @@ body {
             text-align: center;
             line-height: 20px;
             font-size: 12px;
-            color: #000;
+            color: #121212;
             opacity: 1;
-            background: rgba(0, 0, 0, 0.2);
+            background: #fff;
+            border: #121212 1px solid;
           }
           .swiper-pagination-bullet-active {
             color: #fff;
-            background: #007aff;
+            background: #121212;
           }
         }
       }

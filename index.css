@@ -46,7 +46,7 @@ body main .mainTitle {
 }
 body main .mainTitle .mainTitleWrapper {
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 body main .mainTitle .mainTitleWrapper h1 {
@@ -251,15 +251,16 @@ body main .mainTitle .mainTitleWrapper .copyRight {
 }
 body .mainContainer {
   position: relative;
+  height: 5000px;
 }
 body .mainContainer .mainFixedBar {
   position: -webkit-sticky;
   position: sticky;
   z-index: 1;
   top: 0;
-  left: 0;
   background-color: #fff;
-  width: 467px;
+  width: 25%;
+  height: 100vh;
   border-right: 1px #121212 solid;
   padding: 54px;
 }
@@ -340,19 +341,23 @@ body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .p
   font-size: 30px;
   font-weight: 700;
   color: #333;
+  margin-bottom: 10px;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectTitle {
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectDes {
   font-size: 16px;
   font-weight: 600;
+  margin-bottom: 50px;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectLang {
   width: 200px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectLang li {
   font-size: 14px;
@@ -372,13 +377,14 @@ body .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet {
   text-align: center;
   line-height: 20px;
   font-size: 12px;
-  color: #000;
+  color: #121212;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background: #fff;
+  border: #121212 1px solid;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet-active {
   color: #fff;
-  background: #007aff;
+  background: #121212;
 }
 body .mainContainer .mainContents .mainAbout {
   margin-top: 200px;
