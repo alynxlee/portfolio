@@ -46,7 +46,7 @@ body {
             height: 10px;
             width: 0%;
             border-bottom: solid 3px #121212;
-            transition: width 0.2s;
+            transition: width 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
           }
           &:hover::after {
             width: 100%;
@@ -503,6 +503,7 @@ body {
             }
           }
           .career {
+            width: 100%;
             ul {
               li {
                 width: 700px;
@@ -516,6 +517,67 @@ body {
                 }
               }
             }
+          }
+        }
+      }
+      .mainSkills {
+        position: relative;
+        h3 {
+          text-align: right;
+          margin-top: 300px;
+        }
+        .skills {
+          // position: absolute;
+          background: url(./images/mainSkills1.png) no-repeat 50% / cover;
+          width: 565px;
+          height: 407.71px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          cursor: default;
+          transition: 0.3s;
+          h5 {
+            font-size: 30px;
+            font-weight: 500;
+            padding: 15px 25px;
+          }
+          ul {
+            line-height: 1.6;
+            padding: 44px;
+          }
+          &:hover {
+            background: url(./images/mainSkills1B.png);
+            color: #fff;
+          }
+        }
+        .graphics {
+          background: url(./images/mainSkills2.png) no-repeat 50% / cover;
+          width: 565px;
+          height: 535px;
+          cursor: default;
+          transition: 0.3s;
+          h5 {
+            font-size: 30px;
+            font-weight: 500;
+            padding: 15px 25px;
+          }
+          ul {
+            line-height: 1.6;
+            padding: 44px;
+            li {
+              h6 {
+                font-weight: 600;
+              }
+              .graphicDes {
+                padding: 10px;
+                li {
+                }
+              }
+            }
+          }
+          &:hover {
+            background: url(./images/mainSkills2B.png);
+            color: #fff;
           }
         }
       }
