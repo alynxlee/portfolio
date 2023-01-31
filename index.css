@@ -19,7 +19,7 @@ body header {
 body header #gnb {
   width: 500px;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -261,7 +261,7 @@ body .mainContainer .mainFixedBar {
   background-color: #fff;
   width: 25%;
   height: 100vh;
-  border-right: 1px #121212 solid;
+  border-right: #121212 solid 1px;
   padding: 54px;
 }
 body .mainContainer .mainFixedBar .mainFixedBarWarpper {
@@ -299,11 +299,11 @@ body .mainContainer .mainFixedBar .mainFixedBarWarpper div .copyRight {
 }
 body .mainContainer .mainContents {
   position: absolute;
-  max-width: 75%;
+  width: 75%;
   top: 0;
   left: 467px;
   height: 100%;
-  padding: 54px;
+  padding: 60px;
   background-color: #fff;
 }
 body .mainContainer .mainContents .mainWork {
@@ -312,7 +312,7 @@ body .mainContainer .mainContents .mainWork {
 body .mainContainer .mainContents .mainWork .swiper {
   margin: 0 auto;
   width: 100%;
-  height: 600px;
+  height: 700px;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-slide {
   text-align: center;
@@ -323,15 +323,18 @@ body .mainContainer .mainContents .mainWork .swiper .swiper-slide {
   justify-content: center;
   align-items: center;
 }
-body .mainContainer .mainContents .mainWork .swiper .swiper-slide img {
+body .mainContainer .mainContents .mainWork .swiper .swiper-slide a {
+  width: 50%;
+}
+body .mainContainer .mainContents .mainWork .swiper .swiper-slide a img {
   display: block;
-  width: 740px;
-  height: 500px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 8px;
   background-color: #121212;
   border-radius: 20px;
+  box-shadow: 1.4px 1.4px 2.2px -30px rgba(0, 0, 0, 0.07), 3.3px 3.3px 5.3px -30px rgba(0, 0, 0, 0.101), 6.3px 6.3px 10px -30px rgba(0, 0, 0, 0.125), 11.2px 11.2px 17.9px -30px rgba(0, 0, 0, 0.149), 20.9px 20.9px 33.4px -30px rgba(0, 0, 0, 0.18), 50px 50px 80px -30px rgba(0, 0, 0, 0.25);
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper {
   text-align: left;
@@ -341,35 +344,51 @@ body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .p
   font-size: 30px;
   font-weight: 700;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectTitle {
   font-size: 40px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectDes {
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  padding-left: 5px;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectLang {
   width: 200px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  padding-left: 5px;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectLang li {
   font-size: 14px;
   font-weight: 600;
   color: #888;
 }
-body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper button {
+body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a {
+  width: 100%;
+}
+body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a button {
   font-size: 16px;
   font-weight: 600;
-  padding: 15px 30px;
+  padding: 12px 30px;
   background-color: #fff;
-  border-radius: 50px;
+  border: #121212 solid 1px;
+  border-radius: 30px;
+  margin-left: 5px;
+}
+body .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a button:hover {
+  color: #fff;
+  background-color: #121212;
+  cursor: pointer;
+}
+body .mainContainer .mainContents .mainWork .swiper .swiper-button-prev,
+body .mainContainer .mainContents .mainWork .swiper .swiper-button-next {
+  color: #121212;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet {
   width: 20px;
@@ -380,12 +399,62 @@ body .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet {
   color: #121212;
   opacity: 1;
   background: #fff;
-  border: #121212 1px solid;
+  border: #121212 solid 1px;
 }
 body .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet-active {
   color: #fff;
   background: #121212;
 }
 body .mainContainer .mainContents .mainAbout {
-  margin-top: 200px;
+  margin-top: 300px;
+}
+body .mainContainer .mainContents .mainAbout .aboutDes1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 95px;
+  padding-left: 30px;
+}
+body .mainContainer .mainContents .mainAbout .aboutDes1 strong {
+  font-weight: 700;
+}
+body .mainContainer .mainContents .mainAbout .aboutDes2 {
+  margin-top: 60px;
+  font-size: 17px;
+  line-height: 1.6;
+  padding-left: 30px;
+}
+body .mainContainer .mainContents .mainAbout .container {
+  margin-top: 270px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+body .mainContainer .mainContents .mainAbout .container h5 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+body .mainContainer .mainContents .mainAbout .container ul {
+  width: 400px;
+}
+body .mainContainer .mainContents .mainAbout .container ul li {
+  font-size: 17px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: flex-start;
+}
+body .mainContainer .mainContents .mainAbout .container .certi {
+  margin-right: 160px;
+}
+body .mainContainer .mainContents .mainAbout .container .certi ul li p:first-child {
+  width: 150px;
+}
+body .mainContainer .mainContents .mainAbout .container .career ul li {
+  width: 700px;
+}
+body .mainContainer .mainContents .mainAbout .container .career ul li p:first-child {
+  width: 30%;
+}
+body .mainContainer .mainContents .mainAbout .container .career ul li p:last-child {
+  width: 50%;
 }

@@ -1,5 +1,6 @@
 // 변수
 $colorBlack: #121212;
+$borderBlack: #121212 solid 1px;
 
 @mixin primaryFont {
   font : {
@@ -29,7 +30,7 @@ body {
     #gnb {
       width: 500px;
       font-size: 24px;
-      font-weight: 600;
+      font-weight: 700;
       display: flex;
       justify-content: space-between;
 
@@ -293,7 +294,7 @@ body {
       background-color: #fff;
       width: 25%;
       height: 100vh;
-      border-right: 1px $colorBlack solid;
+      border-right: $borderBlack;
       padding: 54px;
       .mainFixedBarWarpper {
         height: 100%;
@@ -332,18 +333,20 @@ body {
 
     .mainContents {
       position: absolute;
-      max-width: 75%;
+      width: 75%;
       top: 0;
       left: 467px;
       height: 100%;
-      padding: 54px;
+      padding: 60px;
       background-color: #fff;
+
       .mainWork {
         margin-top: 71px;
+
         .swiper {
           margin: 0 auto;
           width: 100%;
-          height: 600px;
+          height: 700px;
           .swiper-slide {
             text-align: center;
             font-size: 18px;
@@ -362,14 +365,22 @@ body {
             -ms-flex-align: center;
             -webkit-align-items: center;
             align-items: center;
-            img {
-              display: block;
-              width: 740px;
-              height: 500px;
-              object-fit: cover;
-              padding: 8px;
-              background-color: #121212;
-              border-radius: 20px;
+            a {
+              width: 50%;
+              img {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+                padding: 8px;
+                background-color: $colorBlack;
+                border-radius: 20px;
+                box-shadow: 1.4px 1.4px 2.2px -30px rgba(0, 0, 0, 0.07),
+                  3.3px 3.3px 5.3px -30px rgba(0, 0, 0, 0.101),
+                  6.3px 6.3px 10px -30px rgba(0, 0, 0, 0.125),
+                  11.2px 11.2px 17.9px -30px rgba(0, 0, 0, 0.149),
+                  20.9px 20.9px 33.4px -30px rgba(0, 0, 0, 0.18),
+                  50px 50px 80px -30px rgba(0, 0, 0, 0.25);
+              }
             }
             .desWrapper {
               text-align: left;
@@ -378,37 +389,53 @@ body {
                 font-size: 30px;
                 font-weight: 700;
                 color: #333;
-                margin-bottom: 10px;
+                margin-bottom: 30px;
               }
               .projectTitle {
                 font-size: 40px;
                 font-weight: 700;
-                margin-bottom: 20px;
+                margin-bottom: 22px;
               }
               .projectDes {
                 font-size: 16px;
                 font-weight: 600;
-                margin-bottom: 50px;
+                margin-bottom: 40px;
+                padding-left: 5px;
               }
               .projectLang {
                 width: 200px;
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 20px;
+                padding-left: 5px;
                 li {
                   font-size: 14px;
                   font-weight: 600;
                   color: #888;
                 }
               }
-              button {
-                font-size: 16px;
-                font-weight: 600;
-                padding: 15px 30px;
-                background-color: #fff;
-                border-radius: 50px;
+              a {
+                width: 100%;
+                button {
+                  font-size: 16px;
+                  font-weight: 600;
+                  padding: 12px 30px;
+                  background-color: #fff;
+                  border: $borderBlack;
+                  border-radius: 30px;
+                  margin-left: 5px;
+                  &:hover {
+                    color: #fff;
+                    background-color: $colorBlack;
+                    cursor: pointer;
+                  }
+                }
               }
             }
+          }
+          .swiper-button-prev,
+          .swiper-button-next {
+            color: $colorBlack;
           }
           .swiper-pagination-bullet {
             width: 20px;
@@ -416,19 +443,81 @@ body {
             text-align: center;
             line-height: 20px;
             font-size: 12px;
-            color: #121212;
+            color: $colorBlack;
             opacity: 1;
             background: #fff;
-            border: #121212 1px solid;
+            border: $borderBlack;
           }
           .swiper-pagination-bullet-active {
             color: #fff;
-            background: #121212;
+            background: $colorBlack;
           }
         }
       }
       .mainAbout {
-        margin-top: 200px;
+        margin-top: 300px;
+        .aboutDes1 {
+          font-size: 24px;
+          font-weight: 500;
+          margin-top: 95px;
+          padding-left: 30px;
+          strong {
+            font-weight: 700;
+          }
+        }
+        .aboutDes2 {
+          margin-top: 60px;
+          font-size: 17px;
+          line-height: 1.6;
+          padding-left: 30px;
+        }
+        .container {
+          margin-top: 270px;
+          display: flex;
+          justify-content: flex-start;
+          padding-left: 30px;
+          h5 {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 60px;
+          }
+          ul {
+            width: 400px;
+            li {
+              font-size: 17px;
+              line-height: 1.6;
+              display: flex;
+              justify-content: flex-start;
+            }
+          }
+          .certi {
+            margin-right: 160px;
+            ul {
+              li {
+                p {
+                  &:first-child {
+                    width: 150px;
+                  }
+                }
+              }
+            }
+          }
+          .career {
+            ul {
+              li {
+                width: 700px;
+                p {
+                  &:first-child {
+                    width: 30%;
+                  }
+                  &:last-child {
+                    width: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
