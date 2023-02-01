@@ -552,12 +552,20 @@ body {
         }
         .mainSkills {
           position: relative;
+          height: 1000px;
           h3 {
             text-align: right;
             margin-top: 300px;
           }
+          .skillGrid {
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 0;
+          }
+
           .skills {
-            background: url(./images/mainSkills1.png) no-repeat 50% / cover;
+            margin-top: 40px;
+            background: url(./images/mainSkills.svg) no-repeat 50% / cover;
             width: 565px;
             height: 407.71px;
             display: flex;
@@ -575,12 +583,31 @@ body {
               padding: 44px;
             }
             &:hover {
-              background: url(./images/mainSkills1B.png);
+              background: url(./images/mainSkillsB.svg);
               color: #fff;
             }
           }
+
+          .htmlCss {
+            margin-top: 150px;
+          }
+          /*
+          .js {
+            bottom: -10%;
+            left: 40%;
+          }
+          .react {
+            bottom: -20%;
+            left: 35%;
+          }
+          .git {
+            bottom: -40%;
+            left: 30%;
+          } */
           .graphics {
-            background: url(./images/mainSkills2.png) no-repeat 50% / cover;
+            margin-top: 40px;
+
+            background: url(./images/mainSkills2.svg) no-repeat 50% / cover;
             width: 565px;
             height: 535px;
             cursor: default;
@@ -605,7 +632,7 @@ body {
               }
             }
             &:hover {
-              background: url(./images/mainSkills2B.png);
+              background: url(./images/mainSkills2B.svg);
               color: #fff;
             }
           }

@@ -495,13 +495,33 @@ body main .mainContainer .mainContents .mainAbout .container .career ul li p:las
 }
 body main .mainContainer .mainContents .mainSkills {
   position: relative;
+  height: 1000px;
+  /*
+  .js {
+    bottom: -10%;
+    left: 40%;
+  }
+  .react {
+    bottom: -20%;
+    left: 35%;
+  }
+  .git {
+    bottom: -40%;
+    left: 30%;
+  } */
 }
 body main .mainContainer .mainContents .mainSkills h3 {
   text-align: right;
   margin-top: 300px;
 }
+body main .mainContainer .mainContents .mainSkills .skillGrid {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
 body main .mainContainer .mainContents .mainSkills .skills {
-  background: url(./images/mainSkills1.png) no-repeat 50%/cover;
+  margin-top: 40px;
+  background: url(./images/mainSkills.svg) no-repeat 50%/cover;
   width: 565px;
   height: 407.71px;
   display: flex;
@@ -520,11 +540,15 @@ body main .mainContainer .mainContents .mainSkills .skills ul {
   padding: 44px;
 }
 body main .mainContainer .mainContents .mainSkills .skills:hover {
-  background: url(./images/mainSkills1B.png);
+  background: url(./images/mainSkillsB.svg);
   color: #fff;
 }
+body main .mainContainer .mainContents .mainSkills .htmlCss {
+  margin-top: 150px;
+}
 body main .mainContainer .mainContents .mainSkills .graphics {
-  background: url(./images/mainSkills2.png) no-repeat 50%/cover;
+  margin-top: 40px;
+  background: url(./images/mainSkills2.svg) no-repeat 50%/cover;
   width: 565px;
   height: 535px;
   cursor: default;
@@ -546,7 +570,7 @@ body main .mainContainer .mainContents .mainSkills .graphics ul li .graphicDes {
   padding: 10px;
 }
 body main .mainContainer .mainContents .mainSkills .graphics:hover {
-  background: url(./images/mainSkills2B.png);
+  background: url(./images/mainSkills2B.svg);
   color: #fff;
 }
 body main .mainContact {
