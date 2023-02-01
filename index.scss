@@ -1,6 +1,7 @@
-// 변수
+/* 변수 */
 $colorBlack: #121212;
 $borderBlack: #121212 solid 1px;
+$borderWhite: #fff solid 1px;
 
 @mixin primaryFont {
   font : {
@@ -11,11 +12,11 @@ $borderBlack: #121212 solid 1px;
   color: $colorBlack;
 }
 
-// css
+/* css */
 body {
   @include primaryFont;
   color: $colorBlack;
-
+  overflow-x: hidden;
   h3 {
     font-size: 60px;
     font-weight: 700;
@@ -25,15 +26,36 @@ body {
     padding: 30px 54px 0 0;
     position: fixed;
     z-index: 9999;
-    color: #121212;
-
+    color: #fff;
+    transition: 0.8s;
+    &.active {
+      color: $colorBlack;
+      #gnb {
+        li {
+          a {
+            &::after {
+              content: '';
+              display: block;
+              position: relative;
+              left: 0;
+              height: 10px;
+              width: 0%;
+              border-bottom: solid 3px $colorBlack;
+              transition: width 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
+            }
+            &:hover::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
     #gnb {
       width: 500px;
       font-size: 24px;
       font-weight: 700;
       display: flex;
       justify-content: space-between;
-
       position: absolute;
       right: 54px;
       li {
@@ -45,7 +67,7 @@ body {
             left: 0;
             height: 10px;
             width: 0%;
-            border-bottom: solid 3px #121212;
+            border-bottom: solid 3px #fff;
             transition: width 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
           }
           &:hover::after {
@@ -57,16 +79,24 @@ body {
   }
 
   main {
+    background-color: $colorBlack;
+    transition: 0.8s;
+    &.active {
+      background-color: #fff;
+    }
     .mainTitle {
       color: #fff;
-      background: $colorBlack url(./images/mainTitleBg.png) no-repeat 50% / cover;
+      background: $colorBlack url(./images/mainTitleBg2.png) no-repeat 50% / cover;
       height: 100vh;
+      margin-bottom: 600px;
       z-index: -1;
-
+      &.active {
+        background: #fff url(./images/mainTitleBg2.png) no-repeat 0 / cover;
+      }
       .mainTitleWrapper {
         position: relative;
         height: 100%;
-        overflow: hidden;
+
         h1 {
           background: url(./images/logo.png) no-repeat 50% / cover;
           width: 154px;
@@ -200,17 +230,17 @@ body {
           height: 200px;
 
           position: absolute;
-          bottom: 8%;
+          bottom: 10%;
           left: 50%;
           transform: translateX(-50%);
 
           cursor: default;
           .titleName {
-            font-size: 84px;
+            font-size: 76px;
             font-weight: 700;
           }
           .titlePf {
-            font-size: 72px;
+            font-size: 64px;
             font-family: 'Italiana', serif;
             font-weight: 400;
             margin-top: -5px;
@@ -218,7 +248,7 @@ body {
         }
         .scrollWrapper {
           position: absolute;
-          bottom: 1%;
+          bottom: 5%;
           left: 50%;
           transform: translateX(-50%);
           cursor: default;
@@ -281,305 +311,431 @@ body {
         }
       }
     }
-  }
 
-  .mainContainer {
-    position: relative;
-    height: 5000px;
-    .mainFixedBar {
-      position: -webkit-sticky;
-      position: sticky;
-      z-index: 1;
-      top: 0;
-      background-color: #fff;
-      width: 25%;
-      height: 100vh;
-      border-right: $borderBlack;
-      padding: 54px;
-      .mainFixedBarWarpper {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        h2 {
-          background: url(./images/logo2.png) no-repeat 50% / cover;
-          width: 358px;
-          height: 181px;
-          text-indent: -9999px;
+    .mainContainer {
+      position: relative;
+      height: 5000px;
+      .mainFixedBar {
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 1;
+        top: 0;
+        width: 25%;
+        height: 100vh;
+        padding: 54px;
+        transition: 1s;
+        &.on {
+          border-right: $borderBlack;
         }
-        div {
-          margin: 0 auto;
-          .contactBtn {
-            background-color: $colorBlack;
-            color: #fff;
-            width: 245px;
-            height: 65px;
-            line-height: 65px;
-            margin-bottom: 20px;
-            text-align: center;
-            border-radius: 50px;
-            span {
-              font-size: 24px;
+        .mainFixedBarWarpper {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          h2 {
+            background: url(./images/logo2.png) no-repeat 50% / cover;
+            width: 358px;
+            height: 181px;
+            text-indent: -9999px;
+          }
+          div {
+            margin: 0 auto;
+            .contactBtn {
+              background-color: $colorBlack;
+              color: #fff;
+              width: 245px;
+              height: 65px;
+              line-height: 65px;
+              margin-bottom: 20px;
+              text-align: center;
+              border-radius: 50px;
+              span {
+                font-size: 24px;
+              }
+            }
+            .copyRight {
+              font-size: 16px;
+              font-weight: 600;
             }
           }
-          .copyRight {
-            font-size: 16px;
-            font-weight: 600;
+        }
+      }
+
+      .mainContents {
+        position: absolute;
+        width: 75%;
+        top: 0;
+        left: 467px;
+        height: 100%;
+        padding: 60px;
+
+        .mainWork {
+          margin-top: 71px;
+
+          .swiper {
+            margin: 0 auto;
+            width: 100%;
+            height: 700px;
+            .swiper-slide {
+              text-align: center;
+              font-size: 18px;
+
+              /* Center slide text vertically */
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              -webkit-justify-content: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              -webkit-align-items: center;
+              align-items: center;
+              a {
+                width: 50%;
+                img {
+                  display: block;
+                  width: 100%;
+                  object-fit: cover;
+                  padding: 8px;
+                  background-color: $colorBlack;
+                  border-radius: 20px;
+                  box-shadow: 1.4px 1.4px 2.2px -30px rgba(0, 0, 0, 0.07),
+                    3.3px 3.3px 5.3px -30px rgba(0, 0, 0, 0.101),
+                    6.3px 6.3px 10px -30px rgba(0, 0, 0, 0.125),
+                    11.2px 11.2px 17.9px -30px rgba(0, 0, 0, 0.149),
+                    20.9px 20.9px 33.4px -30px rgba(0, 0, 0, 0.18),
+                    50px 50px 80px -30px rgba(0, 0, 0, 0.25);
+                }
+              }
+              .desWrapper {
+                text-align: left;
+                margin: 0 100px;
+                .projectNum {
+                  font-size: 30px;
+                  font-weight: 700;
+                  color: #333;
+                  margin-bottom: 30px;
+                }
+                .projectTitle {
+                  font-size: 40px;
+                  font-weight: 700;
+                  margin-bottom: 22px;
+                }
+                .projectDes {
+                  font-size: 16px;
+                  font-weight: 600;
+                  margin-bottom: 40px;
+                  padding-left: 5px;
+                }
+                .projectLang {
+                  width: 200px;
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 20px;
+                  padding-left: 5px;
+                  li {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #888;
+                  }
+                }
+                a {
+                  width: 100%;
+                  button {
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 12px 30px;
+                    background-color: #fff;
+                    border: $borderBlack;
+                    border-radius: 30px;
+                    margin-left: 5px;
+                    transition: 0.3s;
+                    &:hover {
+                      color: #fff;
+                      background-color: $colorBlack;
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+              color: $colorBlack;
+            }
+            .swiper-pagination-bullet {
+              width: 20px;
+              height: 20px;
+              text-align: center;
+              line-height: 20px;
+              font-size: 12px;
+              color: $colorBlack;
+              opacity: 1;
+              background: #fff;
+              border: $borderBlack;
+            }
+            .swiper-pagination-bullet-active {
+              color: #fff;
+              background: $colorBlack;
+            }
+          }
+        }
+        .mainAbout {
+          margin-top: 300px;
+          .aboutDes1 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 95px;
+            padding-left: 30px;
+            strong {
+              font-weight: 700;
+            }
+          }
+          .aboutDes2 {
+            margin-top: 60px;
+            font-size: 17px;
+            line-height: 1.6;
+            padding-left: 30px;
+          }
+          .container {
+            margin-top: 270px;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 30px;
+            h5 {
+              font-size: 30px;
+              font-weight: 500;
+              margin-bottom: 60px;
+            }
+            ul {
+              width: 400px;
+              li {
+                font-size: 17px;
+                line-height: 1.6;
+                display: flex;
+                justify-content: flex-start;
+              }
+            }
+            .certi {
+              margin-right: 160px;
+              ul {
+                li {
+                  p {
+                    &:first-child {
+                      width: 150px;
+                    }
+                  }
+                }
+              }
+            }
+            .career {
+              width: 100%;
+              ul {
+                li {
+                  width: 700px;
+                  p {
+                    &:first-child {
+                      width: 30%;
+                    }
+                    &:last-child {
+                      width: 50%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .mainSkills {
+          position: relative;
+          h3 {
+            text-align: right;
+            margin-top: 300px;
+          }
+          .skills {
+            background: url(./images/mainSkills1.png) no-repeat 50% / cover;
+            width: 565px;
+            height: 407.71px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: default;
+            transition: 0.3s;
+            h5 {
+              font-size: 30px;
+              font-weight: 500;
+              padding: 15px 25px;
+            }
+            ul {
+              line-height: 1.6;
+              padding: 44px;
+            }
+            &:hover {
+              background: url(./images/mainSkills1B.png);
+              color: #fff;
+            }
+          }
+          .graphics {
+            background: url(./images/mainSkills2.png) no-repeat 50% / cover;
+            width: 565px;
+            height: 535px;
+            cursor: default;
+            transition: 0.3s;
+            h5 {
+              font-size: 30px;
+              font-weight: 500;
+              padding: 15px 25px;
+            }
+            ul {
+              line-height: 1.6;
+              padding: 44px;
+              li {
+                h6 {
+                  font-weight: 600;
+                }
+                .graphicDes {
+                  padding: 10px;
+                  li {
+                  }
+                }
+              }
+            }
+            &:hover {
+              background: url(./images/mainSkills2B.png);
+              color: #fff;
+            }
           }
         }
       }
     }
-
-    .mainContents {
-      position: absolute;
-      width: 75%;
-      top: 0;
-      left: 467px;
-      height: 100%;
-      padding: 60px;
-      background-color: #fff;
-
-      .mainWork {
-        margin-top: 71px;
-
-        .swiper {
-          margin: 0 auto;
+    .mainContact {
+      color: #fff;
+      margin-top: 600px;
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 100px);
+      .contactBg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background: $colorBlack url(./images/footerBg.png) no-repeat 100% / cover;
+        .bgBox {
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
-          height: 700px;
-          .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
+          height: 100%;
 
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-            a {
-              width: 50%;
-              img {
-                display: block;
-                width: 100%;
-                object-fit: cover;
-                padding: 8px;
-                background-color: $colorBlack;
-                border-radius: 20px;
-                box-shadow: 1.4px 1.4px 2.2px -30px rgba(0, 0, 0, 0.07),
-                  3.3px 3.3px 5.3px -30px rgba(0, 0, 0, 0.101),
-                  6.3px 6.3px 10px -30px rgba(0, 0, 0, 0.125),
-                  11.2px 11.2px 17.9px -30px rgba(0, 0, 0, 0.149),
-                  20.9px 20.9px 33.4px -30px rgba(0, 0, 0, 0.18),
-                  50px 50px 80px -30px rgba(0, 0, 0, 0.25);
-              }
-            }
-            .desWrapper {
-              text-align: left;
-              margin: 0 100px;
-              .projectNum {
-                font-size: 30px;
-                font-weight: 700;
-                color: #333;
-                margin-bottom: 30px;
-              }
-              .projectTitle {
-                font-size: 40px;
-                font-weight: 700;
-                margin-bottom: 22px;
-              }
-              .projectDes {
-                font-size: 16px;
-                font-weight: 600;
-                margin-bottom: 40px;
-                padding-left: 5px;
-              }
-              .projectLang {
-                width: 200px;
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 20px;
-                padding-left: 5px;
-                li {
-                  font-size: 14px;
-                  font-weight: 600;
-                  color: #888;
-                }
-              }
-              a {
-                width: 100%;
-                button {
-                  font-size: 16px;
-                  font-weight: 600;
-                  padding: 12px 30px;
-                  background-color: #fff;
-                  border: $borderBlack;
-                  border-radius: 30px;
-                  margin-left: 5px;
-                  &:hover {
-                    color: #fff;
-                    background-color: $colorBlack;
-                    cursor: pointer;
-                  }
-                }
-              }
-            }
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background: $colorBlack url(./images/footerBg.png) no-repeat 100% / cover;
+          &:first-child {
+            filter: blur(15px) brightness(0.5) saturate(0.8);
+            -webkit-filter: blur(15px) brightness(0.5) saturate(0.8);
           }
-          .swiper-button-prev,
-          .swiper-button-next {
-            color: $colorBlack;
-          }
-          .swiper-pagination-bullet {
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            line-height: 20px;
-            font-size: 12px;
-            color: $colorBlack;
-            opacity: 1;
-            background: #fff;
-            border: $borderBlack;
-          }
-          .swiper-pagination-bullet-active {
-            color: #fff;
-            background: $colorBlack;
+          &:nth-child(2) {
+            clip-path: circle(120px at var(--x) var(--y));
           }
         }
+        .circle {
+          position: absolute;
+          top: -120px;
+          left: -120px;
+          width: 240px;
+          height: 240px;
+          border-radius: 50%;
+          box-shadow: 0px 0px 3.7px -20px rgba(0, 0, 0, 0.034),
+            0px 0px 8.8px -20px rgba(0, 0, 0, 0.048), 0px 0px 16.5px -20px rgba(0, 0, 0, 0.06),
+            0px 0px 29.5px -20px rgba(0, 0, 0, 0.072), 0px 0px 55.1px -20px rgba(0, 0, 0, 0.086),
+            0px 0px 132px -20px rgba(0, 0, 0, 0.12);
+          transform: translate(var(--x), var(--y));
+        }
       }
-      .mainAbout {
-        margin-top: 300px;
-        .aboutDes1 {
-          font-size: 24px;
-          font-weight: 500;
-          margin-top: 95px;
-          padding-left: 30px;
-          strong {
+      .text {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateY(-50%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .textCon {
+          width: 40vw;
+          position: absolute;
+          cursor: default;
+          h3 {
+            margin-bottom: 125px;
+          }
+          .name {
+            width: 15vw;
+            font-size: 36px;
             font-weight: 700;
-          }
-        }
-        .aboutDes2 {
-          margin-top: 60px;
-          font-size: 17px;
-          line-height: 1.6;
-          padding-left: 30px;
-        }
-        .container {
-          margin-top: 270px;
-          display: flex;
-          justify-content: flex-start;
-          padding-left: 30px;
-          h5 {
-            font-size: 30px;
-            font-weight: 500;
-            margin-bottom: 60px;
-          }
-          ul {
-            width: 400px;
-            li {
-              font-size: 17px;
-              line-height: 1.6;
-              display: flex;
-              justify-content: flex-start;
+            margin-bottom: 45px;
+            letter-spacing: 1.1px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            .nameKo {
+              font-size: 20px;
+              font-weight: 300;
             }
           }
-          .certi {
-            margin-right: 160px;
-            ul {
-              li {
-                p {
-                  &:first-child {
-                    width: 150px;
-                  }
-                }
-              }
-            }
-          }
-          .career {
-            width: 100%;
-            ul {
-              li {
-                width: 700px;
-                p {
-                  &:first-child {
-                    width: 30%;
-                  }
-                  &:last-child {
-                    width: 50%;
-                  }
-                }
+          .contactBtn {
+            width: 20vw;
+            display: flex;
+            justify-content: space-between;
+            button {
+              font-size: 16px;
+              font-weight: 400;
+              font-family: 'Pretendard';
+              background-color: #12121286;
+              border: $borderWhite;
+              border-radius: 30px;
+              padding: 10px 35px;
+              color: #fff;
+              cursor: pointer;
+              transition: 0.5s;
+              &:hover {
+                background-color: #fff;
+                color: $colorBlack;
               }
             }
           }
         }
       }
-      .mainSkills {
-        position: relative;
-        h3 {
-          text-align: right;
-          margin-top: 300px;
-        }
-        .skills {
-          // position: absolute;
-          background: url(./images/mainSkills1.png) no-repeat 50% / cover;
-          width: 565px;
-          height: 407.71px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          cursor: default;
-          transition: 0.3s;
-          h5 {
-            font-size: 30px;
-            font-weight: 500;
-            padding: 15px 25px;
-          }
-          ul {
-            line-height: 1.6;
-            padding: 44px;
-          }
-          &:hover {
-            background: url(./images/mainSkills1B.png);
-            color: #fff;
-          }
-        }
-        .graphics {
-          background: url(./images/mainSkills2.png) no-repeat 50% / cover;
-          width: 565px;
-          height: 535px;
-          cursor: default;
-          transition: 0.3s;
-          h5 {
-            font-size: 30px;
-            font-weight: 500;
-            padding: 15px 25px;
-          }
-          ul {
-            line-height: 1.6;
-            padding: 44px;
-            li {
-              h6 {
-                font-weight: 600;
-              }
-              .graphicDes {
-                padding: 10px;
-                li {
-                }
-              }
-            }
-          }
-          &:hover {
-            background: url(./images/mainSkills2B.png);
-            color: #fff;
-          }
-        }
+    }
+  }
+  footer {
+    color: #fff;
+    border-top: $borderWhite;
+    .ftWrapper {
+      height: 100px;
+      background-color: $colorBlack;
+
+      display: flex;
+      align-items: center;
+
+      .copyright {
+        width: 330px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 12px 30px;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        margin-left: 54px;
+        cursor: default;
       }
     }
   }
