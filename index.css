@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* 변수 */
 @-webkit-keyframes scrollIcon {
   0% {
     transform: translateX(-50%) translateY(0);
@@ -213,6 +212,7 @@ body main .mainTitle .mainTitleWrapper .titleText img {
   transform: scale(0.6);
   position: absolute;
   left: 0;
+  transition: 0.8s;
 }
 body main .mainTitle .mainTitleWrapper .titleText img:first-child {
   top: -4%;
@@ -840,3 +840,6 @@ body footer .ftWrapper .copyright {
   margin-left: 54px;
   cursor: default;
 }
+
+@media screen and (min-width: 2000px) {
+  /* 모바일에 사용될 스타일을 여기에 �
