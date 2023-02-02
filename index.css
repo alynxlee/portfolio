@@ -282,7 +282,7 @@ body main .mainTitle .mainTitleWrapper .copyRight {
 }
 body main .mainContainer {
   position: relative;
-  height: 5000px;
+  height: 5300px;
 }
 body main .mainContainer .mainFixedBar {
   position: -webkit-sticky;
@@ -495,32 +495,46 @@ body main .mainContainer .mainContents .mainAbout .container .career ul li p:las
 }
 body main .mainContainer .mainContents .mainSkills {
   position: relative;
-  height: 1000px;
-  /*
-  .js {
-    bottom: -10%;
-    left: 40%;
-  }
-  .react {
-    bottom: -20%;
-    left: 35%;
-  }
-  .git {
-    bottom: -40%;
-    left: 30%;
+  height: 2800px;
+  /* .htmlCss {
+    margin-top: 150px;
   } */
 }
 body main .mainContainer .mainContents .mainSkills h3 {
   text-align: right;
   margin-top: 300px;
 }
-body main .mainContainer .mainContents .mainSkills .skillGrid {
+body main .mainContainer .mainContents .mainSkills .skillWrapper {
+  margin-top: 400px;
+}
+body main .mainContainer .mainContents .mainSkills .skillPos {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 0;
+  bottom: -30%;
+  margin-top: 40px;
+}
+body main .mainContainer .mainContents .mainSkills .htmlPos {
+  width: 565px;
+  transform: translateX(50%) translateY(-40%);
+}
+body main .mainContainer .mainContents .mainSkills .jsPos {
+  width: 565px;
+  transform: translateX(130%) translateY(-25%);
+}
+body main .mainContainer .mainContents .mainSkills .reactPos {
+  width: 565px;
+  transform: translateX(10%) translateY(-20%);
+}
+body main .mainContainer .mainContents .mainSkills .graphicsPos {
+  width: 565px;
+  transform: translateX(90%) translateY(-8%);
+  bottom: -42%;
+}
+body main .mainContainer .mainContents .mainSkills .gitPos {
+  width: 565px;
+  transform: translateX(45%);
 }
 body main .mainContainer .mainContents .mainSkills .skills {
-  margin-top: 40px;
   background: url(./images/mainSkills.svg) no-repeat 50%/cover;
   width: 565px;
   height: 407.71px;
@@ -540,11 +554,8 @@ body main .mainContainer .mainContents .mainSkills .skills ul {
   padding: 44px;
 }
 body main .mainContainer .mainContents .mainSkills .skills:hover {
-  background: url(./images/mainSkillsB.svg);
+  background: url(./images/mainSkillsB.svg) no-repeat 50%/cover;
   color: #fff;
-}
-body main .mainContainer .mainContents .mainSkills .htmlCss {
-  margin-top: 150px;
 }
 body main .mainContainer .mainContents .mainSkills .graphics {
   margin-top: 40px;
@@ -570,7 +581,7 @@ body main .mainContainer .mainContents .mainSkills .graphics ul li .graphicDes {
   padding: 10px;
 }
 body main .mainContainer .mainContents .mainSkills .graphics:hover {
-  background: url(./images/mainSkills2B.svg);
+  background: url(./images/mainSkills2B.svg) no-repeat 50%/cover;
   color: #fff;
 }
 body main .mainContact {
@@ -670,6 +681,7 @@ body main .mainContact .text .textCon .contactBtn button:hover {
   color: #121212;
 }
 body footer {
+  position: relative;
   color: #fff;
   border-top: #fff solid 1px;
 }
