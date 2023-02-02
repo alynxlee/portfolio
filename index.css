@@ -176,21 +176,21 @@ body main.active {
 }
 body main .mainTitle {
   color: #fff;
-  background: #121212 url(./images/mainTitleBg2.png) no-repeat 50%/cover;
+  background: #121212 url(./images/mainTitleBg2.png) no-repeat 50% / cover;
   height: 100vh;
   margin-bottom: 600px;
   z-index: -1;
   transition: 0.8s;
 }
 body main .mainTitle.active {
-  background: #fff url(./images/mainTitleBg2.png) no-repeat 0/cover;
+  background: #fff url(./images/mainTitleBg2.png) no-repeat 0 / cover;
 }
 body main .mainTitle .mainTitleWrapper {
   position: relative;
   height: 100%;
 }
 body main .mainTitle .mainTitleWrapper h1 {
-  background: url(./images/logo.png) no-repeat 50%/cover;
+  background: url(./images/logo.png) no-repeat 50% / cover;
   width: 154px;
   height: 81px;
   text-indent: -9999px;
@@ -212,7 +212,6 @@ body main .mainTitle .mainTitleWrapper .titleText img {
   transform: scale(0.6);
   position: absolute;
   left: 0;
-  transition: 0.8s;
 }
 body main .mainTitle .mainTitleWrapper .titleText img:first-child {
   top: -4%;
@@ -345,7 +344,13 @@ body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon {
   position: relative;
   height: 42px;
 }
-body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollCircle {
+body
+  main
+  .mainTitle
+  .mainTitleWrapper
+  .scrollWrapper
+  .scrollIcon
+  .scrollCircle {
   width: 15px;
   height: 15px;
   background-color: #fff;
@@ -356,7 +361,7 @@ body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollCircle 
   left: 50%;
   transform: translateX(-50%);
   -webkit-animation: scrollIcon 1.2s infinite;
-          animation: scrollIcon 1.2s infinite;
+  animation: scrollIcon 1.2s infinite;
 }
 body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollBar {
   width: 22px;
@@ -423,7 +428,7 @@ body main .mainContainer .mainFixedBar .mainFixedBarWarpper {
 }
 body main .mainContainer .mainFixedBar .mainFixedBarWarpper a h2 {
   display: block;
-  background: url(./images/logo2.png) no-repeat 50%/cover;
+  background: url(./images/logo2.png) no-repeat 50% / cover;
   width: 358px;
   height: 181px;
   text-indent: -9999px;
@@ -446,10 +451,23 @@ body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn {
   border-radius: 50px;
   transition: 0.8s;
 }
-body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn span {
+body
+  main
+  .mainContainer
+  .mainFixedBar
+  .mainFixedBarWarpper
+  div
+  .contactBtn
+  span {
   font-size: 24px;
 }
-body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn:hover {
+body
+  main
+  .mainContainer
+  .mainFixedBar
+  .mainFixedBarWarpper
+  div
+  .contactBtn:hover {
   background-color: #fff;
   border: #121212 solid 1px;
   color: #121212;
@@ -493,49 +511,119 @@ body main .mainContainer .mainContents .mainWork .swiper .swiper-slide a img {
   display: block;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   padding: 8px;
   background-color: #121212;
   border-radius: 20px;
-  box-shadow: 1.4px 1.4px 2.2px -30px rgba(0, 0, 0, 0.07), 3.3px 3.3px 5.3px -30px rgba(0, 0, 0, 0.101), 6.3px 6.3px 10px -30px rgba(0, 0, 0, 0.125), 11.2px 11.2px 17.9px -30px rgba(0, 0, 0, 0.149), 20.9px 20.9px 33.4px -30px rgba(0, 0, 0, 0.18), 50px 50px 80px -30px rgba(0, 0, 0, 0.25);
+  box-shadow: 1.4px 1.4px 2.2px -30px rgba(0, 0, 0, 0.07),
+    3.3px 3.3px 5.3px -30px rgba(0, 0, 0, 0.101),
+    6.3px 6.3px 10px -30px rgba(0, 0, 0, 0.125),
+    11.2px 11.2px 17.9px -30px rgba(0, 0, 0, 0.149),
+    20.9px 20.9px 33.4px -30px rgba(0, 0, 0, 0.18),
+    50px 50px 80px -30px rgba(0, 0, 0, 0.25);
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-slide
+  .desWrapper {
   text-align: left;
   margin: 0 100px;
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectNum {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-slide
+  .desWrapper
+  .projectNum {
   font-size: 30px;
   font-weight: 700;
   color: #333;
   margin-bottom: 30px;
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectTitle {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-slide
+  .desWrapper
+  .projectTitle {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 22px;
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectDes {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-slide
+  .desWrapper
+  .projectDes {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 40px;
   padding-left: 5px;
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectLang {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-slide
+  .desWrapper
+  .projectLang {
   width: 200px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
   padding-left: 5px;
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectLang li {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-slide
+  .desWrapper
+  .projectLang
+  li {
   font-size: 14px;
   font-weight: 600;
   color: #888;
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-slide
+  .desWrapper
+  a {
   width: 100%;
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a button {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-slide
+  .desWrapper
+  a
+  button {
   font-size: 16px;
   font-weight: 600;
   padding: 12px 30px;
@@ -545,7 +633,16 @@ body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapp
   margin-left: 5px;
   transition: 0.3s;
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a button:hover {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-slide
+  .desWrapper
+  a
+  button:hover {
   color: #fff;
   background-color: #121212;
   cursor: pointer;
@@ -554,7 +651,13 @@ body main .mainContainer .mainContents .mainWork .swiper .swiper-button-prev,
 body main .mainContainer .mainContents .mainWork .swiper .swiper-button-next {
   color: #121212;
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
   text-align: center;
@@ -565,7 +668,13 @@ body main .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bull
   background: #fff;
   border: #121212 solid 1px;
 }
-body main .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet-active {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainWork
+  .swiper
+  .swiper-pagination-bullet-active {
   color: #fff;
   background: #121212;
 }
@@ -610,7 +719,16 @@ body main .mainContainer .mainContents .mainAbout .container ul li {
 body main .mainContainer .mainContents .mainAbout .container .certi {
   margin-right: 160px;
 }
-body main .mainContainer .mainContents .mainAbout .container .certi ul li p:first-child {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainAbout
+  .container
+  .certi
+  ul
+  li
+  p:first-child {
   width: 150px;
 }
 body main .mainContainer .mainContents .mainAbout .container .career {
@@ -619,10 +737,28 @@ body main .mainContainer .mainContents .mainAbout .container .career {
 body main .mainContainer .mainContents .mainAbout .container .career ul li {
   width: 700px;
 }
-body main .mainContainer .mainContents .mainAbout .container .career ul li p:first-child {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainAbout
+  .container
+  .career
+  ul
+  li
+  p:first-child {
   width: 30%;
 }
-body main .mainContainer .mainContents .mainAbout .container .career ul li p:last-child {
+body
+  main
+  .mainContainer
+  .mainContents
+  .mainAbout
+  .container
+  .career
+  ul
+  li
+  p:last-child {
   width: 50%;
 }
 body main .mainContainer .mainContents .mainSkills {
@@ -664,7 +800,7 @@ body main .mainContainer .mainContents .mainSkills .gitPos {
   transform: translateX(45%);
 }
 body main .mainContainer .mainContents .mainSkills .skills {
-  background: url(./images/mainSkills.svg) no-repeat 50%/cover;
+  background: url(./images/mainSkills.svg) no-repeat 50% / cover;
   width: 565px;
   height: 407.71px;
   display: flex;
@@ -683,12 +819,12 @@ body main .mainContainer .mainContents .mainSkills .skills ul {
   padding: 44px;
 }
 body main .mainContainer .mainContents .mainSkills .skills:hover {
-  background: url(./images/mainSkillsB.svg) no-repeat 50%/cover;
+  background: url(./images/mainSkillsB.svg) no-repeat 50% / cover;
   color: #fff;
 }
 body main .mainContainer .mainContents .mainSkills .graphics {
   margin-top: 40px;
-  background: url(./images/mainSkills2.svg) no-repeat 50%/cover;
+  background: url(./images/mainSkills2.svg) no-repeat 50% / cover;
   width: 565px;
   height: 535px;
   cursor: default;
@@ -710,17 +846,17 @@ body main .mainContainer .mainContents .mainSkills .graphics ul li .graphicDes {
   padding: 10px;
 }
 body main .mainContainer .mainContents .mainSkills .graphics:hover {
-  background: url(./images/mainSkills2B.svg) no-repeat 50%/cover;
+  background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
   color: #fff;
 }
 body main .mainContainer .mainContents .mainSkills .graphics.on {
-  background: url(./images/mainSkills2B.svg) no-repeat 50%/cover;
+  background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
 }
 body main .mainContainer .mainContents .mainSkills .git {
   transition: 0.8s;
 }
 body main .mainContainer .mainContents .mainSkills .git.on {
-  background: url(./images/mainSkillsB.svg) no-repeat 50%/cover;
+  background: url(./images/mainSkillsB.svg) no-repeat 50% / cover;
 }
 body main .mainContact {
   color: #fff;
@@ -735,7 +871,7 @@ body main .mainContact .contactBg {
   left: 0;
   width: 100%;
   height: calc(100vh - 100px);
-  background: #121212 url(./images/footerBg.png) no-repeat 100%/cover;
+  background: #121212 url(./images/footerBg.png) no-repeat 100% / cover;
 }
 body main .mainContact .contactBg .bgBox {
   position: absolute;
@@ -746,7 +882,7 @@ body main .mainContact .contactBg .bgBox {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #121212 url(./images/footerBg.png) no-repeat 100%/cover;
+  background: #121212 url(./images/footerBg.png) no-repeat 100% / cover;
 }
 body main .mainContact .contactBg .bgBox:first-child {
   filter: blur(15px) brightness(0.5) saturate(0.8);
@@ -754,7 +890,7 @@ body main .mainContact .contactBg .bgBox:first-child {
 }
 body main .mainContact .contactBg .bgBox:nth-child(2) {
   -webkit-clip-path: circle(120px at var(--x) var(--y));
-          clip-path: circle(120px at var(--x) var(--y));
+  clip-path: circle(120px at var(--x) var(--y));
 }
 body main .mainContact .contactBg .circle {
   position: absolute;
@@ -763,7 +899,12 @@ body main .mainContact .contactBg .circle {
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  box-shadow: 0px 0px 3.7px -20px rgba(0, 0, 0, 0.034), 0px 0px 8.8px -20px rgba(0, 0, 0, 0.048), 0px 0px 16.5px -20px rgba(0, 0, 0, 0.06), 0px 0px 29.5px -20px rgba(0, 0, 0, 0.072), 0px 0px 55.1px -20px rgba(0, 0, 0, 0.086), 0px 0px 132px -20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 3.7px -20px rgba(0, 0, 0, 0.034),
+    0px 0px 8.8px -20px rgba(0, 0, 0, 0.048),
+    0px 0px 16.5px -20px rgba(0, 0, 0, 0.06),
+    0px 0px 29.5px -20px rgba(0, 0, 0, 0.072),
+    0px 0px 55.1px -20px rgba(0, 0, 0, 0.086),
+    0px 0px 132px -20px rgba(0, 0, 0, 0.12);
   transform: translate(var(--x), var(--y));
 }
 body main .mainContact .text {
@@ -842,4 +983,198 @@ body footer .ftWrapper .copyright {
 }
 
 @media screen and (min-width: 2000px) {
-  /* 모바일에 사용될 스타일을 여기에 �
+  /* 모바일에 사용될 스타일을 여기에 작성합니다. */
+  body main .mainTitle .mainTitleWrapper .titleText img:first-child {
+    top: 1%;
+    left: -6%;
+    z-index: 8;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(2) {
+    top: 2%;
+    left: 1%;
+    z-index: 7;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(3) {
+    top: 6.5%;
+    left: 17%;
+    z-index: 6;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(4) {
+    top: 3.5%;
+    left: 31%;
+    z-index: 5;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(5) {
+    top: 7.5%;
+    left: 50%;
+    z-index: 4;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(6) {
+    top: 22%;
+    left: 63%;
+    z-index: 3;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(7) {
+    top: 0%;
+    left: 69%;
+    z-index: 2;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(8) {
+    top: 9.5%;
+    left: 84%;
+    z-index: 1;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(9) {
+    top: 5.8%;
+    left: 99%;
+    z-index: 0;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(10) {
+    top: 37.5%;
+    left: -10%;
+    z-index: 17;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(11) {
+    top: 37.3%;
+    left: -0.15%;
+    z-index: 16;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(12) {
+    top: 31%;
+    left: 19.5%;
+    z-index: 15;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(13) {
+    top: 39.5%;
+    left: 29%;
+    z-index: 14;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(14) {
+    top: 40.4%;
+    left: 45%;
+    z-index: 13;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(15) {
+    top: 28%;
+    left: 57%;
+    z-index: 12;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(16) {
+    top: 31.5%;
+    left: 70%;
+    z-index: 11;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(17) {
+    top: 36.5%;
+    left: 87%;
+    z-index: 10;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(18) {
+    top: 29.5%;
+    left: 100%;
+    z-index: 9;
+  }
+  body main .mainContainer {
+    transition: 0.8s;
+  }
+  body main .mainContainer .mainContents {
+    width: 70%;
+    left: 600px;
+  }
+}
+@media screen and (min-width: 2300px) {
+  body main .mainTitle .mainTitleWrapper .titleText img:first-child {
+    top: 6%;
+    left: -6%;
+    z-index: 8;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(2) {
+    top: 7%;
+    left: 3%;
+    z-index: 7;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(3) {
+    top: 13.5%;
+    left: 20%;
+    z-index: 6;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(4) {
+    top: 6.5%;
+    left: 36%;
+    z-index: 5;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(5) {
+    top: 10.5%;
+    left: 56%;
+    z-index: 4;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(6) {
+    top: 27%;
+    left: 70%;
+    z-index: 3;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(7) {
+    top: 5%;
+    left: 78%;
+    z-index: 2;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(8) {
+    top: 14.5%;
+    left: 94%;
+    z-index: 1;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(9) {
+    top: 10.8%;
+    left: 110%;
+    z-index: 0;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(10) {
+    top: 42.5%;
+    left: -8%;
+    z-index: 17;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(11) {
+    top: 42.3%;
+    left: 2%;
+    z-index: 16;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(12) {
+    top: 36%;
+    left: 22%;
+    z-index: 15;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(13) {
+    top: 44.5%;
+    left: 34%;
+    z-index: 14;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(14) {
+    top: 45.4%;
+    left: 51%;
+    z-index: 13;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(15) {
+    top: 33%;
+    left: 65%;
+    z-index: 12;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(16) {
+    top: 36.5%;
+    left: 79%;
+    z-index: 11;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(17) {
+    top: 41.5%;
+    left: 96%;
+    z-index: 10;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText img:nth-child(18) {
+    top: 34.5%;
+    left: 110%;
+    z-index: 9;
+  }
+  body main .mainContainer .mainContents {
+    width: 70vw;
+    left: 650px;
+  }
+}
