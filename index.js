@@ -103,7 +103,7 @@ addEventListener('scroll', () => {
 });
 
 // mainContact mousemove blur
-const pos = document.documentElement;
+const pos = document.querySelector('.mainContact');
 
 pos.addEventListener('mousemove', e => {
   pos.style.setProperty('--x', e.clientX + 'px');

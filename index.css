@@ -1,5 +1,33 @@
 @charset "UTF-8";
 /* 변수 */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  display: block;
+}
+
+/* button */
+::-webkit-scrollbar-button {
+  border: #121212 solid 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #121212;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+  border: #121212 solid 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+}
+
 /* css */
 body {
   font-family: "Pretendard";

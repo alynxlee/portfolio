@@ -12,6 +12,30 @@ $borderWhite: #fff solid 1px;
   color: $colorBlack;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  display: block;
+}
+/* button */
+::-webkit-scrollbar-button {
+  border: $borderBlack;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #121212;
+  border-radius: 20px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+  border: $borderBlack;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+}
+
 /* css */
 body {
   @include primaryFont;
