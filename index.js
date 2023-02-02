@@ -4,7 +4,9 @@ const mainContainer = document.querySelector('.mainContainer');
 const mainContact = document.querySelector('.mainContact');
 const sideBar = document.querySelector('.mainFixedBar');
 const contactBtn = document.querySelector('.mainFixedBar .contactBtn');
-const goUp = document.querySelector('.goUp a');
+const goUp = document.querySelector('.goUp');
+const sideBarLogo = document.querySelector('.mainFixedBar h2');
+const gitBg = document.querySelector('.mainSkills .git');
 
 // smooth behavior
 goUp.addEventListener('click', e => {
@@ -60,20 +62,29 @@ addEventListener('mousemove', e => {
   el18.style.transform = `translate(${x / -80}px, ${y / 120}px) scale(0.6)`;
 });
 
+// 스크롤 이벤트
+
 addEventListener('scroll', () => {
   // main background 변경
   let num1 = mainContainer.offsetTop - 600;
   let num4 = mainContact.offsetTop - 1000;
+  let i = 0;
   if (scrollY > num1) {
     main.classList.add('active');
     contactBtn.classList.remove('on');
+    sideBarLogo.classList.remove('on');
+    goUp.classList.remove('on');
+    gitBg.classList.remove('on');
   } else if (scrollY <= num1) {
     main.classList.remove('active');
-    contactBtn.classList.add('on');
+    sideBarLogo.classList.add('on');
   }
 
   if (scrollY > num4) {
     main.classList.remove('active');
+    contactBtn.classList.add('on');
+    goUp.classList.add('on');
+    gitBg.classList.add('on');
   }
 
   // header 색 변경

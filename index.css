@@ -1,5 +1,27 @@
 @charset "UTF-8";
 /* 변수 */
+@-webkit-keyframes scrollIcon {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    transform: translateX(-50%) translateY(130%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+@keyframes scrollIcon {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    transform: translateX(-50%) translateY(130%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -51,12 +73,45 @@ body .goUp {
   background-color: #fff;
   filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.3));
   z-index: 9999;
+  transition: 0.3s;
 }
 body .goUp .goUpBtn {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+body .goUp .goUpBtn .goUpWhite {
+  display: none;
+}
+body .goUp:hover {
+  transform: translateY(-10%);
+  background-color: #121212;
+}
+body .goUp:hover .goUpBlack {
+  display: none;
+}
+body .goUp:hover .goUpWhite {
+  display: block;
+}
+body .goUp.on {
+  background-color: rgba(18, 18, 18, 0.5254901961);
+  border: #fff solid 1px;
+}
+body .goUp.on .goUpBtn .goUpBlack {
+  display: none;
+}
+body .goUp.on .goUpBtn .goUpWhite {
+  display: block;
+}
+body .goUp.on:hover {
+  background-color: #fff;
+}
+body .goUp.on:hover .goUpBtn .goUpBlack {
+  display: block;
+}
+body .goUp.on:hover .goUpBtn .goUpWhite {
+  display: none;
 }
 body header {
   width: 100%;
@@ -80,12 +135,14 @@ body header.active #gnb li a::after {
   position: relative;
   left: 0;
   height: 10px;
-  width: 0%;
+  transform: scaleX(0);
+  transform-origin: right;
   border-bottom: solid 3px #121212;
-  transition: width 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
+  transition: transform 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
 }
 body header.active #gnb li a:hover::after {
-  width: 100%;
+  transform: scaleX(1);
+  transform-origin: left;
 }
 body header #gnb {
   width: 500px;
@@ -102,12 +159,14 @@ body header #gnb li a::after {
   position: relative;
   left: 0;
   height: 10px;
-  width: 0%;
+  transform-origin: right;
+  transform: scaleX(0);
   border-bottom: solid 3px #fff;
-  transition: width 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
+  transition: transform 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
 }
 body header #gnb li a:hover::after {
-  width: 100%;
+  transform-origin: left;
+  transform: scaleX(1);
 }
 body main {
   background-color: #121212;
@@ -296,6 +355,8 @@ body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollCircle 
   top: 3px;
   left: 50%;
   transform: translateX(-50%);
+  -webkit-animation: scrollIcon 1.2s infinite;
+          animation: scrollIcon 1.2s infinite;
 }
 body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollBar {
   width: 22px;
@@ -315,13 +376,18 @@ body main .mainTitle .mainTitleWrapper .email {
   line-height: 40px;
   margin: 0 0 20px 54px;
   text-align: center;
-  border: 1px #fff solid;
+  border: 1px #bbb solid;
+  color: #bbb;
   border-radius: 20px;
   background-color: rgba(18, 18, 18, 0.5254901961);
   position: absolute;
   bottom: 0;
   left: 0;
-  cursor: default;
+  transition: 0.3s;
+}
+body main .mainTitle .mainTitleWrapper .email:hover {
+  border: #fff solid 1px;
+  color: #fff;
 }
 body main .mainTitle .mainTitleWrapper .copyRight {
   font-size: 16px;
@@ -356,10 +422,15 @@ body main .mainContainer .mainFixedBar .mainFixedBarWarpper {
   align-items: center;
 }
 body main .mainContainer .mainFixedBar .mainFixedBarWarpper a h2 {
+  display: block;
   background: url(./images/logo2.png) no-repeat 50%/cover;
   width: 358px;
   height: 181px;
   text-indent: -9999px;
+  transition: 1s;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper a h2.on {
+  display: none;
 }
 body main .mainContainer .mainFixedBar .mainFixedBarWarpper div {
   margin: 0 auto;
@@ -557,9 +628,6 @@ body main .mainContainer .mainContents .mainAbout .container .career ul li p:las
 body main .mainContainer .mainContents .mainSkills {
   position: relative;
   height: 2800px;
-  /* .htmlCss {
-    margin-top: 150px;
-  } */
 }
 body main .mainContainer .mainContents .mainSkills h3 {
   text-align: right;
@@ -644,6 +712,15 @@ body main .mainContainer .mainContents .mainSkills .graphics ul li .graphicDes {
 body main .mainContainer .mainContents .mainSkills .graphics:hover {
   background: url(./images/mainSkills2B.svg) no-repeat 50%/cover;
   color: #fff;
+}
+body main .mainContainer .mainContents .mainSkills .graphics.on {
+  background: url(./images/mainSkills2B.svg) no-repeat 50%/cover;
+}
+body main .mainContainer .mainContents .mainSkills .git {
+  transition: 0.8s;
+}
+body main .mainContainer .mainContents .mainSkills .git.on {
+  background: url(./images/mainSkillsB.svg) no-repeat 50%/cover;
 }
 body main .mainContact {
   color: #fff;

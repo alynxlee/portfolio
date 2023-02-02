@@ -12,6 +12,17 @@ $borderWhite: #fff solid 1px;
   color: $colorBlack;
 }
 
+@keyframes scrollIcon {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    transform: translateX(-50%) translateY(130%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -56,11 +67,49 @@ body {
     background-color: #fff;
     filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.3));
     z-index: 9999;
+
+    transition: 0.3s;
     .goUpBtn {
       height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
+      .goUpWhite {
+        display: none;
+      }
+    }
+    &:hover {
+      transform: translateY(-10%);
+      background-color: $colorBlack;
+      .goUpBlack {
+        display: none;
+      }
+      .goUpWhite {
+        display: block;
+      }
+    }
+    &.on {
+      background-color: #12121286;
+      border: $borderWhite;
+      .goUpBtn {
+        .goUpBlack {
+          display: none;
+        }
+        .goUpWhite {
+          display: block;
+        }
+      }
+      &:hover {
+        background-color: #fff;
+        .goUpBtn {
+          .goUpBlack {
+            display: block;
+          }
+          .goUpWhite {
+            display: none;
+          }
+        }
+      }
     }
   }
   header {
@@ -87,12 +136,14 @@ body {
               position: relative;
               left: 0;
               height: 10px;
-              width: 0%;
+              transform: scaleX(0);
+              transform-origin: right;
               border-bottom: solid 3px $colorBlack;
-              transition: width 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
+              transition: transform 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
             }
             &:hover::after {
-              width: 100%;
+              transform: scaleX(1);
+              transform-origin: left;
             }
           }
         }
@@ -114,12 +165,14 @@ body {
             position: relative;
             left: 0;
             height: 10px;
-            width: 0%;
+            transform-origin: right;
+            transform: scaleX(0);
             border-bottom: solid 3px #fff;
-            transition: width 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
+            transition: transform 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
           }
           &:hover::after {
-            width: 100%;
+            transform-origin: left;
+            transform: scaleX(1);
           }
         }
       }
@@ -316,6 +369,8 @@ body {
               top: 3px;
               left: 50%;
               transform: translateX(-50%);
+
+              animation: scrollIcon 1.2s infinite;
             }
             .scrollBar {
               width: 22px;
@@ -338,7 +393,8 @@ body {
           margin: 0 0 20px 54px;
 
           text-align: center;
-          border: 1px #fff solid;
+          border: 1px #bbb solid;
+          color: #bbb;
           border-radius: 20px;
           background-color: #12121286;
 
@@ -346,7 +402,11 @@ body {
           bottom: 0;
           left: 0;
 
-          cursor: default;
+          transition: 0.3s;
+          &:hover {
+            border: $borderWhite;
+            color: #fff;
+          }
         }
         .copyRight {
           font-size: 16px;
@@ -384,10 +444,15 @@ body {
           align-items: center;
           a {
             h2 {
+              display: block;
               background: url(./images/logo2.png) no-repeat 50% / cover;
               width: 358px;
               height: 181px;
               text-indent: -9999px;
+              transition: 1s;
+              &.on {
+                display: none;
+              }
             }
           }
           div {
@@ -670,11 +735,6 @@ body {
               color: #fff;
             }
           }
-
-          /* .htmlCss {
-            margin-top: 150px;
-          } */
-
           .graphics {
             margin-top: 40px;
 
@@ -697,14 +757,21 @@ body {
                 }
                 .graphicDes {
                   padding: 10px;
-                  li {
-                  }
                 }
               }
             }
             &:hover {
               background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
               color: #fff;
+            }
+            &.on {
+              background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
+            }
+          }
+          .git {
+            transition: 0.8s;
+            &.on {
+              background: url(./images/mainSkillsB.svg) no-repeat 50% / cover;
             }
           }
         }
