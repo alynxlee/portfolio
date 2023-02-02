@@ -45,15 +45,39 @@ body {
     font-size: 60px;
     font-weight: 700;
   }
+
+  .goUp {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 5%;
+    right: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.3));
+    z-index: 9999;
+    .goUpBtn {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   header {
     width: 100%;
     padding: 30px 54px 0 0;
     position: fixed;
     z-index: 9999;
     color: #fff;
-    transition: 0.8s;
+    transition-duration: 0.8s;
+    transition-property: color, background-color;
+
     &.active {
       color: $colorBlack;
+      background-color: #fff;
+      right: 0;
+      width: 75%;
+      height: 80px;
       #gnb {
         li {
           a {
@@ -114,6 +138,7 @@ body {
       height: 100vh;
       margin-bottom: 600px;
       z-index: -1;
+      transition: 0.8s;
       &.active {
         background: #fff url(./images/mainTitleBg2.png) no-repeat 0 / cover;
       }
@@ -357,11 +382,13 @@ body {
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
-          h2 {
-            background: url(./images/logo2.png) no-repeat 50% / cover;
-            width: 358px;
-            height: 181px;
-            text-indent: -9999px;
+          a {
+            h2 {
+              background: url(./images/logo2.png) no-repeat 50% / cover;
+              width: 358px;
+              height: 181px;
+              text-indent: -9999px;
+            }
           }
           div {
             margin: 0 auto;
@@ -374,8 +401,17 @@ body {
               margin-bottom: 20px;
               text-align: center;
               border-radius: 50px;
+              transition: 0.8s;
               span {
                 font-size: 24px;
+              }
+              &:hover {
+                background-color: #fff;
+                border: $borderBlack;
+                color: $colorBlack;
+              }
+              &.on {
+                color: $colorBlack;
               }
             }
             .copyRight {
@@ -393,7 +429,7 @@ body {
         left: 467px;
         height: 100%;
         padding: 60px;
-
+        margin-top: 120px;
         .mainWork {
           margin-top: 71px;
 

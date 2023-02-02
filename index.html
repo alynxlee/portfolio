@@ -21,6 +21,12 @@
     <title>LeeHyeJin Portfolio</title>
   </head>
   <body>
+    <!-- top button -->
+    <div class="goUp">
+      <a href="#">
+        <div class="goUpBtn"><img src="./images/goUp.svg" alt="goUp" /></div
+      ></a>
+    </div>
     <!---------- header ---------->
 
     <!-- logo -->
@@ -82,7 +88,7 @@
         <!-- mainFixedBar -->
         <article class="mainFixedBar">
           <div class="mainFixedBarWarpper">
-            <h2 class="fixedBarLogo">logo</h2>
+            <a href="/"><h2 class="fixedBarLogo">logo</h2></a>
             <div>
               <div class="contactBtn">
                 <span><a href="mailto:alynxlee2@gmail.com">CONTACT</a></span>
@@ -303,6 +309,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper('.mySwiper', {
+        spaceBetween: 30,
+        loop: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,

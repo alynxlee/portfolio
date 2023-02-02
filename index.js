@@ -3,9 +3,20 @@ const main = document.querySelector('main');
 const mainContainer = document.querySelector('.mainContainer');
 const mainContact = document.querySelector('.mainContact');
 const sideBar = document.querySelector('.mainFixedBar');
+const contactBtn = document.querySelector('.mainFixedBar .contactBtn');
+const goUp = document.querySelector('.goUp a');
+
+// smooth behavior
+goUp.addEventListener('click', e => {
+  e.preventDefault();
+
+  scrollTo({
+    top: 0,
+    behavior: 'smooth', // 스크롤 부드럽게 이동
+  });
+});
 
 // mainTitle 텍스트 움직임
-
 const el1 = document.querySelector('.titleText img:nth-child(1)');
 const el2 = document.querySelector('.titleText img:nth-child(2)');
 const el3 = document.querySelector('.titleText img:nth-child(3)');
@@ -28,24 +39,6 @@ const el18 = document.querySelector('.titleText img:nth-child(18)');
 addEventListener('mousemove', e => {
   let x = e.clientX;
   let y = e.clientY;
-  // el1.style.transform = `translate(${x / -40}px, ${y / -100}px) scale(0.6)`;
-  // el2.style.transform = `translate(${x / -40}px, ${y / -100}px) scale(0.6)`;
-  // el3.style.transform = `translate(${x / -40}px, ${y / -100}px) scale(0.6)`;
-  // el4.style.transform = `translate(${x / -40}px, ${y / -100}px) scale(0.6)`;
-  // el5.style.transform = `translate(${x / -40}px, ${y / -100}px) scale(0.6)`;
-  // el6.style.transform = `translate(${x / -400}px, ${y / -20}px) scale(0.6)`;
-  // el7.style.transform = `translate(${x / -400}px, ${y / -20}px) scale(0.6)`;
-  // el8.style.transform = `translate(${x / -400}px, ${y / -20}px) scale(0.6)`;
-  // el9.style.transform = `translate(${x / -400}px, ${y / -20}px) scale(0.6)`;
-  // el10.style.transform = `translate(${x / -280}px, ${y / 30}px) scale(0.6)`;
-  // el11.style.transform = `translate(${x / -280}px, ${y / 30}px) scale(0.6)`;
-  // el12.style.transform = `translate(${x / -280}px, ${y / 30}px) scale(0.6)`;
-  // el13.style.transform = `translate(${x / -280}px, ${y / 30}px) scale(0.6)`;
-  // el14.style.transform = `translate(${x / -280}px, ${y / 30}px) scale(0.6)`;
-  // el15.style.transform = `translate(${x / -280}px, ${y / 30}px) scale(0.6)`;
-  // el16.style.transform = `translate(${x / -280}px, ${y / 30}px) scale(0.6)`;
-  // el17.style.transform = `translate(${x / -280}px, ${y / 30}px) scale(0.6)`;
-  // el18.style.transform = `translate(${x / -280}px, ${y / 30}px) scale(0.6)`;
 
   el1.style.transform = `translate(${x / 100}px, ${y / -100}px) scale(0.6)`;
   el2.style.transform = `translate(${x / -80}px, ${y / 150}px) scale(0.6)`;
@@ -73,8 +66,10 @@ addEventListener('scroll', () => {
   let num4 = mainContact.offsetTop - 1000;
   if (scrollY > num1) {
     main.classList.add('active');
+    contactBtn.classList.remove('on');
   } else if (scrollY <= num1) {
     main.classList.remove('active');
+    contactBtn.classList.add('on');
   }
 
   if (scrollY > num4) {
@@ -82,7 +77,7 @@ addEventListener('scroll', () => {
   }
 
   // header 색 변경
-  let num2 = mainContainer.offsetTop - 555;
+  let num2 = mainContainer.offsetTop - 300;
   if (scrollY > num2) {
     header.classList.add('active');
   } else if (scrollY <= num2) {
