@@ -58,6 +58,10 @@ body {
   color: #121212;
   overflow-x: hidden;
 }
+body.dark {
+  color: #eee;
+  background-color: #121212;
+}
 body h3 {
   font-size: 60px;
   font-weight: 700;
@@ -111,6 +115,32 @@ body .goUp.on:hover .goUpBtn .goUpBlack {
 }
 body .goUp.on:hover .goUpBtn .goUpWhite {
   display: none;
+}
+body .darkMode {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 5%;
+  right: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.3));
+  z-index: 9999;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body .darkMode:hover {
+  transform: translateY(-10%);
+  background-color: #121212;
+}
+body .darkMode .darkToggle {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .darkMode .darkToggle img {
+  width: 60%;
 }
 body header {
   width: 100%;
@@ -678,12 +708,35 @@ body main .mainContainer .mainContents .mainSkills .skills h5 {
   padding: 15px 25px;
 }
 body main .mainContainer .mainContents .mainSkills .skills ul {
-  line-height: 1.6;
+  line-height: 2;
   padding: 44px;
+}
+body main .mainContainer .mainContents .mainSkills .skills ul li {
+  position: relative;
+  padding-left: 30px;
+}
+body main .mainContainer .mainContents .mainSkills .skills ul li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/file.svg) no-repeat 50%/cover;
+  transition: 0.8s;
 }
 body main .mainContainer .mainContents .mainSkills .skills:hover {
   background: url(./images/mainSkillsB.svg) no-repeat 50%/cover;
   color: #fff;
+}
+body main .mainContainer .mainContents .mainSkills .skills:hover li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/fileW.svg) no-repeat 50%/cover;
 }
 body main .mainContainer .mainContents .mainSkills .graphics {
   margin-top: 40px;

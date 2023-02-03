@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const header = document.querySelector('header');
 const main = document.querySelector('main');
 const mainContainer = document.querySelector('.mainContainer');
@@ -8,6 +9,14 @@ const goUp = document.querySelector('.goUp');
 const sideBarLogo = document.querySelector('.mainFixedBar h2');
 const gitBg = document.querySelector('.mainSkills .git');
 const footer = document.querySelector('footer');
+const dark = document.querySelector('.darkMode');
+
+// dark mode toggle
+dark.addEventListener('click', e => {
+  e.preventDefault();
+  body.classList.toggle('dark');
+  main.classList.toggle('active');
+});
 
 // smooth behavior
 goUp.addEventListener('click', e => {
@@ -85,8 +94,8 @@ addEventListener('scroll', () => {
   // main background 변경
   let num1 = mainContainer.offsetTop - 600;
   let num4 = mainContact.offsetTop - 1000;
-  let i = 0;
-  if (scrollY > num1) {
+
+  if (scrollY > num1 && body.className !== `dark`) {
     main.classList.add('active');
     contactBtn.classList.remove('on');
     sideBarLogo.classList.remove('on');
@@ -106,7 +115,7 @@ addEventListener('scroll', () => {
 
   // header 색 변경
   let num2 = mainContainer.offsetTop - 300;
-  if (scrollY > num2) {
+  if (scrollY > num2 && body.className !== `dark`) {
     header.classList.add('active');
   } else if (scrollY <= num2) {
     header.classList.remove('active');
@@ -121,6 +130,11 @@ addEventListener('scroll', () => {
   if (scrollY > num3) {
     sideBar.classList.add('on');
   } else if (scrollY <= num3) {
+    sideBar.classList.remove('on');
+  }
+
+  let num5 = mainContact.offsetTop - 1600;
+  if (scrollY > num5) {
     sideBar.classList.remove('on');
   }
 });
