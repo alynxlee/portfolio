@@ -176,21 +176,21 @@ body main.active {
 }
 body main .mainTitle {
   color: #fff;
-  background: #121212 url(./images/mainTitleBg2.png) no-repeat 50% / cover;
+  background: #121212 url(./images/mainTitleBg2.png) no-repeat 50%/cover;
   height: 100vh;
   margin-bottom: 600px;
   z-index: -1;
   transition: 0.8s;
 }
 body main .mainTitle.active {
-  background: #fff url(./images/mainTitleBg2.png) no-repeat 0 / cover;
+  background: #fff url(./images/mainTitleBg2.png) no-repeat 0/cover;
 }
 body main .mainTitle .mainTitleWrapper {
   position: relative;
   height: 100%;
 }
 body main .mainTitle .mainTitleWrapper h1 {
-  background: url(./images/logo.png) no-repeat 50% / cover;
+  background: url(./images/logo.png) no-repeat 50%/cover;
   width: 154px;
   height: 81px;
   text-indent: -9999px;
@@ -344,13 +344,7 @@ body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon {
   position: relative;
   height: 42px;
 }
-body
-  main
-  .mainTitle
-  .mainTitleWrapper
-  .scrollWrapper
-  .scrollIcon
-  .scrollCircle {
+body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollCircle {
   width: 15px;
   height: 15px;
   background-color: #fff;
@@ -361,7 +355,7 @@ body
   left: 50%;
   transform: translateX(-50%);
   -webkit-animation: scrollIcon 1.2s infinite;
-  animation: scrollIcon 1.2s infinite;
+          animation: scrollIcon 1.2s infinite;
 }
 body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollBar {
   width: 22px;
@@ -428,7 +422,7 @@ body main .mainContainer .mainFixedBar .mainFixedBarWarpper {
 }
 body main .mainContainer .mainFixedBar .mainFixedBarWarpper a h2 {
   display: block;
-  background: url(./images/logo2.png) no-repeat 50% / cover;
+  background: url(./images/logo2.png) no-repeat 50%/cover;
   width: 358px;
   height: 181px;
   text-indent: -9999px;
@@ -451,23 +445,10 @@ body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn {
   border-radius: 50px;
   transition: 0.8s;
 }
-body
-  main
-  .mainContainer
-  .mainFixedBar
-  .mainFixedBarWarpper
-  div
-  .contactBtn
-  span {
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn span {
   font-size: 24px;
 }
-body
-  main
-  .mainContainer
-  .mainFixedBar
-  .mainFixedBarWarpper
-  div
-  .contactBtn:hover {
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn:hover {
   background-color: #fff;
   border: #121212 solid 1px;
   color: #121212;
@@ -511,119 +492,49 @@ body main .mainContainer .mainContents .mainWork .swiper .swiper-slide a img {
   display: block;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   padding: 8px;
   background-color: #121212;
   border-radius: 20px;
-  box-shadow: 1.4px 1.4px 2.2px -30px rgba(0, 0, 0, 0.07),
-    3.3px 3.3px 5.3px -30px rgba(0, 0, 0, 0.101),
-    6.3px 6.3px 10px -30px rgba(0, 0, 0, 0.125),
-    11.2px 11.2px 17.9px -30px rgba(0, 0, 0, 0.149),
-    20.9px 20.9px 33.4px -30px rgba(0, 0, 0, 0.18),
-    50px 50px 80px -30px rgba(0, 0, 0, 0.25);
+  box-shadow: 1.4px 1.4px 2.2px -30px rgba(0, 0, 0, 0.07), 3.3px 3.3px 5.3px -30px rgba(0, 0, 0, 0.101), 6.3px 6.3px 10px -30px rgba(0, 0, 0, 0.125), 11.2px 11.2px 17.9px -30px rgba(0, 0, 0, 0.149), 20.9px 20.9px 33.4px -30px rgba(0, 0, 0, 0.18), 50px 50px 80px -30px rgba(0, 0, 0, 0.25);
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-slide
-  .desWrapper {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper {
   text-align: left;
   margin: 0 100px;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-slide
-  .desWrapper
-  .projectNum {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectNum {
   font-size: 30px;
   font-weight: 700;
   color: #333;
   margin-bottom: 30px;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-slide
-  .desWrapper
-  .projectTitle {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectTitle {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 22px;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-slide
-  .desWrapper
-  .projectDes {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectDes {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 40px;
   padding-left: 5px;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-slide
-  .desWrapper
-  .projectLang {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectLang {
   width: 200px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
   padding-left: 5px;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-slide
-  .desWrapper
-  .projectLang
-  li {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectLang li {
   font-size: 14px;
   font-weight: 600;
   color: #888;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-slide
-  .desWrapper
-  a {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a {
   width: 100%;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-slide
-  .desWrapper
-  a
-  button {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a button {
   font-size: 16px;
   font-weight: 600;
   padding: 12px 30px;
@@ -633,16 +544,7 @@ body
   margin-left: 5px;
   transition: 0.3s;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-slide
-  .desWrapper
-  a
-  button:hover {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a button:hover {
   color: #fff;
   background-color: #121212;
   cursor: pointer;
@@ -651,13 +553,7 @@ body main .mainContainer .mainContents .mainWork .swiper .swiper-button-prev,
 body main .mainContainer .mainContents .mainWork .swiper .swiper-button-next {
   color: #121212;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-pagination-bullet {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
   text-align: center;
@@ -668,13 +564,7 @@ body
   background: #fff;
   border: #121212 solid 1px;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainWork
-  .swiper
-  .swiper-pagination-bullet-active {
+body main .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet-active {
   color: #fff;
   background: #121212;
 }
@@ -719,16 +609,7 @@ body main .mainContainer .mainContents .mainAbout .container ul li {
 body main .mainContainer .mainContents .mainAbout .container .certi {
   margin-right: 160px;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainAbout
-  .container
-  .certi
-  ul
-  li
-  p:first-child {
+body main .mainContainer .mainContents .mainAbout .container .certi ul li p:first-child {
   width: 150px;
 }
 body main .mainContainer .mainContents .mainAbout .container .career {
@@ -737,28 +618,10 @@ body main .mainContainer .mainContents .mainAbout .container .career {
 body main .mainContainer .mainContents .mainAbout .container .career ul li {
   width: 700px;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainAbout
-  .container
-  .career
-  ul
-  li
-  p:first-child {
+body main .mainContainer .mainContents .mainAbout .container .career ul li p:first-child {
   width: 30%;
 }
-body
-  main
-  .mainContainer
-  .mainContents
-  .mainAbout
-  .container
-  .career
-  ul
-  li
-  p:last-child {
+body main .mainContainer .mainContents .mainAbout .container .career ul li p:last-child {
   width: 50%;
 }
 body main .mainContainer .mainContents .mainSkills {
@@ -800,7 +663,7 @@ body main .mainContainer .mainContents .mainSkills .gitPos {
   transform: translateX(45%);
 }
 body main .mainContainer .mainContents .mainSkills .skills {
-  background: url(./images/mainSkills.svg) no-repeat 50% / cover;
+  background: url(./images/mainSkills.svg) no-repeat 50%/cover;
   width: 565px;
   height: 407.71px;
   display: flex;
@@ -819,12 +682,12 @@ body main .mainContainer .mainContents .mainSkills .skills ul {
   padding: 44px;
 }
 body main .mainContainer .mainContents .mainSkills .skills:hover {
-  background: url(./images/mainSkillsB.svg) no-repeat 50% / cover;
+  background: url(./images/mainSkillsB.svg) no-repeat 50%/cover;
   color: #fff;
 }
 body main .mainContainer .mainContents .mainSkills .graphics {
   margin-top: 40px;
-  background: url(./images/mainSkills2.svg) no-repeat 50% / cover;
+  background: url(./images/mainSkills2.svg) no-repeat 50%/cover;
   width: 565px;
   height: 535px;
   cursor: default;
@@ -846,17 +709,17 @@ body main .mainContainer .mainContents .mainSkills .graphics ul li .graphicDes {
   padding: 10px;
 }
 body main .mainContainer .mainContents .mainSkills .graphics:hover {
-  background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
+  background: url(./images/mainSkills2B.svg) no-repeat 50%/cover;
   color: #fff;
 }
 body main .mainContainer .mainContents .mainSkills .graphics.on {
-  background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
+  background: url(./images/mainSkills2B.svg) no-repeat 50%/cover;
 }
 body main .mainContainer .mainContents .mainSkills .git {
   transition: 0.8s;
 }
 body main .mainContainer .mainContents .mainSkills .git.on {
-  background: url(./images/mainSkillsB.svg) no-repeat 50% / cover;
+  background: url(./images/mainSkillsB.svg) no-repeat 50%/cover;
 }
 body main .mainContact {
   color: #fff;
@@ -871,7 +734,7 @@ body main .mainContact .contactBg {
   left: 0;
   width: 100%;
   height: calc(100vh - 100px);
-  background: #121212 url(./images/footerBg.png) no-repeat 100% / cover;
+  background: #121212 url(./images/footerBg.png) no-repeat 100%/cover;
 }
 body main .mainContact .contactBg .bgBox {
   position: absolute;
@@ -882,7 +745,7 @@ body main .mainContact .contactBg .bgBox {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #121212 url(./images/footerBg.png) no-repeat 100% / cover;
+  background: #121212 url(./images/footerBg.png) no-repeat 100%/cover;
 }
 body main .mainContact .contactBg .bgBox:first-child {
   filter: blur(15px) brightness(0.5) saturate(0.8);
@@ -890,7 +753,7 @@ body main .mainContact .contactBg .bgBox:first-child {
 }
 body main .mainContact .contactBg .bgBox:nth-child(2) {
   -webkit-clip-path: circle(120px at var(--x) var(--y));
-  clip-path: circle(120px at var(--x) var(--y));
+          clip-path: circle(120px at var(--x) var(--y));
 }
 body main .mainContact .contactBg .circle {
   position: absolute;
@@ -899,12 +762,7 @@ body main .mainContact .contactBg .circle {
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  box-shadow: 0px 0px 3.7px -20px rgba(0, 0, 0, 0.034),
-    0px 0px 8.8px -20px rgba(0, 0, 0, 0.048),
-    0px 0px 16.5px -20px rgba(0, 0, 0, 0.06),
-    0px 0px 29.5px -20px rgba(0, 0, 0, 0.072),
-    0px 0px 55.1px -20px rgba(0, 0, 0, 0.086),
-    0px 0px 132px -20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 3.7px -20px rgba(0, 0, 0, 0.034), 0px 0px 8.8px -20px rgba(0, 0, 0, 0.048), 0px 0px 16.5px -20px rgba(0, 0, 0, 0.06), 0px 0px 29.5px -20px rgba(0, 0, 0, 0.072), 0px 0px 55.1px -20px rgba(0, 0, 0, 0.086), 0px 0px 132px -20px rgba(0, 0, 0, 0.12);
   transform: translate(var(--x), var(--y));
 }
 body main .mainContact .text {
