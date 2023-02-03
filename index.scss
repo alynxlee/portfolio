@@ -5,7 +5,7 @@ $borderWhite: #fff solid 1px;
 
 @mixin primaryFont {
   font : {
-    family: "Pretendard";
+    family: 'Pretendard';
     weight: 400;
     size: 20px;
   }
@@ -132,7 +132,7 @@ body {
         li {
           a {
             &::after {
-              content: "";
+              content: '';
               display: block;
               position: relative;
               left: 0;
@@ -161,7 +161,7 @@ body {
       li {
         a {
           &::after {
-            content: "";
+            content: '';
             display: block;
             position: relative;
             left: 0;
@@ -188,8 +188,7 @@ body {
     }
     .mainTitle {
       color: #fff;
-      background: $colorBlack url(./images/mainTitleBg2.png) no-repeat 50% /
-        cover;
+      background: $colorBlack url(./images/mainTitleBg2.png) no-repeat 50% / cover;
       height: 100vh;
       margin-bottom: 600px;
       z-index: -1;
@@ -346,7 +345,7 @@ body {
           }
           .titlePf {
             font-size: 64px;
-            font-family: "Italiana", serif;
+            font-family: 'Italiana', serif;
             font-weight: 400;
             margin-top: -5px;
           }
@@ -435,7 +434,7 @@ body {
         width: 25%;
         height: 100vh;
         padding: 54px;
-        transition: 1s;
+        transition: 0.8s;
         &.on {
           border-right: $borderBlack;
         }
@@ -792,8 +791,7 @@ body {
         left: 0;
         width: 100%;
         height: calc(100vh - 100px);
-        background: $colorBlack url(./images/footerBg.png) no-repeat 100% /
-          cover;
+        background: $colorBlack url(./images/footerBg.png) no-repeat 100% / cover;
         .bgBox {
           position: absolute;
           top: 0;
@@ -805,8 +803,7 @@ body {
           justify-content: center;
           align-items: center;
 
-          background: $colorBlack url(./images/footerBg.png) no-repeat 100% /
-            cover;
+          background: $colorBlack url(./images/footerBg.png) no-repeat 100% / cover;
           &:first-child {
             filter: blur(15px) brightness(0.5) saturate(0.8);
             -webkit-filter: blur(15px) brightness(0.5) saturate(0.8);
@@ -823,10 +820,8 @@ body {
           height: 240px;
           border-radius: 50%;
           box-shadow: 0px 0px 3.7px -20px rgba(0, 0, 0, 0.034),
-            0px 0px 8.8px -20px rgba(0, 0, 0, 0.048),
-            0px 0px 16.5px -20px rgba(0, 0, 0, 0.06),
-            0px 0px 29.5px -20px rgba(0, 0, 0, 0.072),
-            0px 0px 55.1px -20px rgba(0, 0, 0, 0.086),
+            0px 0px 8.8px -20px rgba(0, 0, 0, 0.048), 0px 0px 16.5px -20px rgba(0, 0, 0, 0.06),
+            0px 0px 29.5px -20px rgba(0, 0, 0, 0.072), 0px 0px 55.1px -20px rgba(0, 0, 0, 0.086),
             0px 0px 132px -20px rgba(0, 0, 0, 0.12);
           transform: translate(var(--x), var(--y));
         }
@@ -870,7 +865,7 @@ body {
             button {
               font-size: 16px;
               font-weight: 400;
-              font-family: "Pretendard";
+              font-family: 'Pretendard';
               background-color: #12121286;
               border: $borderWhite;
               border-radius: 30px;

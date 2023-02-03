@@ -408,7 +408,7 @@ body main .mainContainer .mainFixedBar {
   width: 25%;
   height: 100vh;
   padding: 54px;
-  transition: 1s;
+  transition: 0.8s;
 }
 body main .mainContainer .mainFixedBar.on {
   border-right: #121212 solid 1px;
