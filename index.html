@@ -4,29 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Open graph -->
     <meta property="og:title" content="LeeHyeJin Portfolio" />
     <meta property="og:url" content="https://alynxlee.github.io/portfolio/" />
     <meta property="og:image" content="./images/openGraph.jpg" />
     <meta property="og:description" content="이혜진의 포트폴리오입니다" />
     <meta property="og:type" content="website" />
+
     <!-- favicon -->
     <link rel="shortcut icon" href="./common/favicon_io/favicon.ico" type="image/x-icon" />
+
     <!-- reset.css -->
     <link rel="stylesheet" href="./common/style/reset.css" />
+
     <!-- webfont cdn -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet" />
+
     <!-- fonts.css -->
     <link rel="stylesheet" href="./fonts.css" />
+
     <!-- swiper.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- script -->
     <script defer src="./index.js"></script>
+
     <!-- style.css -->
     <link rel="stylesheet" href="./index.css" />
+
     <title>LeeHyeJin Portfolio</title>
   </head>
   <body>
@@ -324,8 +335,14 @@
       </div>
     </footer>
 
+    <!-- swiper script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- aos script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
+      // swiper
       var swiper = new Swiper('.mySwiper', {
         spaceBetween: 30,
         loop: true,
@@ -341,6 +358,9 @@
           prevEl: '.swiper-button-prev',
         },
       });
+
+      // aos
+      AOS.init();
     </script>
   </body>
 </html>
