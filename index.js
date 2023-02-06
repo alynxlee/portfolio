@@ -10,12 +10,43 @@ const sideBarLogo = document.querySelector('.mainFixedBar h2');
 const gitBg = document.querySelector('.mainSkills .git');
 const footer = document.querySelector('footer');
 const dark = document.querySelector('.darkMode');
+const skills = document.querySelectorAll('.mainSkills .skills');
+const jsBg = document.querySelector('.mainSkills .js');
+const graphicsBg = document.querySelector('.mainSkills .graphics');
+
+// footer에서 버튼 이동
+let ftOffsetTop = footer.offsetTop;
+let clientHt = document.documentElement.clientHeight;
+let result = ftOffsetTop - clientHt - footer.clientHeight + 100;
+
+addEventListener('scroll', () => {
+  scrollY > 300 ? (dark.style.opacity = 1) : (dark.style.opacity = 0);
+  scrollY > 300 ? (goUp.style.opacity = 1) : (goUp.style.opacity = 0);
+  console.log(scrollY);
+
+  if (scrollY >= result) {
+    goUp.style.marginBottom = '100px';
+    dark.style.marginBottom = '100px';
+  } else if (scrollY < result) {
+    goUp.style.marginBottom = '0';
+    dark.style.marginBottom = '0';
+  }
+});
 
 // dark mode toggle
 dark.addEventListener('click', e => {
   e.preventDefault();
   body.classList.toggle('dark');
   main.classList.toggle('active');
+
+  header.classList.toggle('dark');
+  /*header.classList.toggle('active');*/
+  skills.forEach(item => {
+    item.classList.toggle('dark');
+  });
+  jsBg.classList.toggle('dark');
+  graphicsBg.classList.toggle('dark');
+  contactBtn.classList.toggle('dark');
 });
 
 // smooth behavior
@@ -26,22 +57,6 @@ goUp.addEventListener('click', e => {
     top: 0,
     behavior: 'smooth', // 스크롤 부드럽게 이동
   });
-});
-
-let ftOffsetTop = footer.offsetTop;
-let clientHt = document.documentElement.clientHeight;
-
-let result = ftOffsetTop - clientHt - footer.clientHeight + 100;
-
-addEventListener('scroll', () => {
-  scrollY > 300 ? (goUp.style.opacity = 1) : (goUp.style.opacity = 0);
-  console.log(scrollY);
-
-  if (scrollY >= result) {
-    goUp.style.marginBottom = '100px';
-  } else if (scrollY < result) {
-    goUp.style.marginBottom = '0';
-  }
 });
 
 // mainTitle 텍스트 움직임
@@ -101,15 +116,24 @@ addEventListener('scroll', () => {
     sideBarLogo.classList.remove('on');
     goUp.classList.remove('on');
     gitBg.classList.remove('on');
+    dark.classList.remove('on');
   } else if (scrollY <= num1) {
     main.classList.remove('active');
     sideBarLogo.classList.add('on');
+  }
+
+  if (scrollY > num1 && body.className == `dark`) {
+    sideBarLogo.classList.remove('on');
   }
 
   if (scrollY > num4) {
     main.classList.remove('active');
     contactBtn.classList.add('on');
     goUp.classList.add('on');
+    dark.classList.add('on');
+  }
+
+  if (scrollY > num4 && body.className !== `dark`) {
     gitBg.classList.add('on');
   }
 
@@ -117,12 +141,22 @@ addEventListener('scroll', () => {
   let num2 = mainContainer.offsetTop - 300;
   if (scrollY > num2 && body.className !== `dark`) {
     header.classList.add('active');
-  } else if (scrollY <= num2) {
+    header.classList.remove('dark');
+  } else if (scrollY <= num2 && body.className !== `dark`) {
+    header.classList.remove('active');
+  }
+
+  if (scrollY > num2 && body.className == `dark`) {
+    header.classList.add('dark');
+  }
+  if (scrollY <= num2 && body.className == `dark`) {
+    header.classList.remove('dark');
     header.classList.remove('active');
   }
 
   if (scrollY > num4) {
     header.classList.remove('active');
+    header.classList.remove('dark');
   }
 
   // 사이드바 border-right

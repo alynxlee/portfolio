@@ -44,7 +44,7 @@ $borderWhite: #fff solid 1px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  display: none;
+  background-color: #fff;
 }
 
 /* css */
@@ -145,6 +145,10 @@ body {
         width: 60%;
       }
     }
+    &.on {
+      background-color: #12121286;
+      border: $borderWhite;
+    }
   }
   header {
     width: 100%;
@@ -182,6 +186,13 @@ body {
           }
         }
       }
+    }
+    &.dark {
+      color: #eee;
+      background-color: $colorBlack;
+      right: 0;
+      width: 75%;
+      height: 80px;
     }
     #gnb {
       width: 500px;
@@ -513,6 +524,10 @@ body {
               &.on {
                 color: $colorBlack;
               }
+              &.dark {
+                color: #eee;
+                border: #eee 1px solid;
+              }
             }
             .copyRight {
               font-size: 16px;
@@ -775,7 +790,7 @@ body {
                   width: 20px;
                   height: 20px;
                   background: url(./images/file.svg) no-repeat 50% / cover;
-                  transition: 0.8s;
+                  transition: 0.3s;
                 }
               }
             }
@@ -794,13 +809,22 @@ body {
                 }
               }
             }
+            &.dark {
+              background: url(./images/mainSkillsB.svg) no-repeat 50% / cover;
+              color: #eee;
+            }
           }
-          .graphics {
+          .js {
             margin-top: 40px;
 
             background: url(./images/mainSkills2.svg) no-repeat 50% / cover;
             width: 565px;
             height: 535px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
             cursor: default;
             transition: 0.3s;
             h5 {
@@ -809,7 +833,63 @@ body {
               padding: 15px 25px;
             }
             ul {
-              line-height: 1.6;
+              line-height: 2;
+              padding: 44px;
+              li {
+                position: relative;
+                padding-left: 30px;
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 23%;
+                  left: 0;
+                  width: 20px;
+                  height: 20px;
+                  background: url(./images/file.svg) no-repeat 50% / cover;
+                  transition: 0.3s;
+                }
+              }
+            }
+            &:hover {
+              background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
+              color: #fff;
+              li {
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 23%;
+                  left: 0;
+                  width: 20px;
+                  height: 20px;
+                  background: url(./images/fileW.svg) no-repeat 50% / cover;
+                }
+              }
+            }
+            &.dark {
+              background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
+              color: #eee;
+            }
+          }
+          .graphics {
+            margin-top: 40px;
+
+            background: url(./images/mainSkills3.svg) no-repeat 50% / cover;
+            width: 565px;
+            height: 631px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            cursor: default;
+            transition: 0.3s;
+            h5 {
+              font-size: 30px;
+              font-weight: 500;
+              padding: 15px 25px;
+            }
+            ul {
+              line-height: 2;
               padding: 44px;
               li {
                 h6 {
@@ -818,20 +898,48 @@ body {
                 .graphicDes {
                   padding: 10px;
                 }
+                li {
+                  position: relative;
+                  padding-left: 30px;
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    top: 23%;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    background: url(./images/file.svg) no-repeat 50% / cover;
+                    transition: 0.3s;
+                  }
+                }
               }
             }
             &:hover {
-              background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
+              background: url(./images/mainSkills3B.svg) no-repeat 50% / cover;
               color: #fff;
+              .graphicDes {
+                li {
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    top: 23%;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    background: url(./images/fileW.svg) no-repeat 50% / cover;
+                  }
+                }
+              }
             }
-            &.on {
-              background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
+            &.dark {
+              background: url(./images/mainSkills3B.svg) no-repeat 50% / cover;
+              color: #eee;
             }
           }
           .git {
-            transition: 0.8s;
+            transition: 0.3s;
             &.on {
-              background: url(./images/mainSkillsB.svg) no-repeat 50% / cover;
+              background: url(./images/mainskillsGit.svg) no-repeat 50% / cover;
             }
           }
         }
@@ -968,7 +1076,6 @@ body {
 }
 
 @media screen and (min-width: 2000px) {
-  /* 모바일에 사용될 스타일을 여기에 작성합니다. */
   body {
     main {
       .mainTitle {
