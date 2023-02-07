@@ -868,7 +868,7 @@ body main .mainContainer .mainContents .mainSkills .git {
   transition: 0.3s;
 }
 body main .mainContainer .mainContents .mainSkills .git.on {
-  background: url(./images/mainskillsGit.svg) no-repeat 50%/cover;
+  background: url(./images/mainSkillsGit.svg) no-repeat 50%/cover;
 }
 body main .mainContact {
   color: #fff;
