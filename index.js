@@ -206,33 +206,33 @@ pos.addEventListener('mousemove', e => {
 });
 
 const mq1 = window.matchMedia('screen and (min-width: 2000px)');
-addEventListener('resize', () => {
-  addEventListener('mousemove', e => {
-    if (mq1.matches) {
-      let x = e.clientX;
-      let y = e.clientY;
+// addEventListener('resize', () => {
+addEventListener('mousemove', e => {
+  if (mq1.matches) {
+    let x = e.clientX;
+    let y = e.clientY;
 
-      el1.style.transform = `translate(${x / 100}px, ${y / -100}px) scale(0.65)`;
-      el2.style.transform = `translate(${x / -80}px, ${y / 150}px) scale(0.65)`;
-      el3.style.transform = `translate(${x / 70}px, ${y / -100}px) scale(0.65)`;
-      el4.style.transform = `translate(${x / -100}px, ${y / -30}px) scale(0.65)`;
-      el5.style.transform = `translate(${x / 500}px, ${y / 70}px) scale(0.65)`;
-      el6.style.transform = `translate(${x / -100}px, ${y / 120}px) scale(0.65)`;
-      el7.style.transform = `translate(${x / 450}px, ${y / -50}px) scale(0.65)`;
-      el8.style.transform = `translate(${x / 100}px, ${y / 500}px) scale(0.65)`;
-      el9.style.transform = `translate(${x / 200}px, ${y / -100}px) scale(0.65)`;
-      el10.style.transform = `translate(${x / 280}px, ${y / 200}px) scale(0.65)`;
-      el11.style.transform = `translate(${x / 120}px, ${y / 60}px) scale(0.65)`;
-      el12.style.transform = `translate(${x / -100}px, ${y / -200}px) scale(0.65)`;
-      el13.style.transform = `translate(${x / 150}px, ${y / 150}px) scale(0.65)`;
-      el14.style.transform = `translate(${x / 100}px, ${y / -100}px) scale(0.65)`;
-      el15.style.transform = `translate(${x / -100}px, ${y / 30}px) scale(0.65)`;
-      el16.style.transform = `translate(${x / 120}px, ${y / 100}px) scale(0.65)`;
-      el17.style.transform = `translate(${x / -150}px, ${y / 200}px) scale(0.65)`;
-      el18.style.transform = `translate(${x / -80}px, ${y / 120}px) scale(0.65)`;
-    }
-  });
+    el1.style.transform = `translate(${x / 100}px, ${y / -100}px) scale(0.65)`;
+    el2.style.transform = `translate(${x / -80}px, ${y / 150}px) scale(0.65)`;
+    el3.style.transform = `translate(${x / 70}px, ${y / -100}px) scale(0.65)`;
+    el4.style.transform = `translate(${x / -100}px, ${y / -30}px) scale(0.65)`;
+    el5.style.transform = `translate(${x / 500}px, ${y / 70}px) scale(0.65)`;
+    el6.style.transform = `translate(${x / -100}px, ${y / 120}px) scale(0.65)`;
+    el7.style.transform = `translate(${x / 450}px, ${y / -50}px) scale(0.65)`;
+    el8.style.transform = `translate(${x / 100}px, ${y / 500}px) scale(0.65)`;
+    el9.style.transform = `translate(${x / 200}px, ${y / -100}px) scale(0.65)`;
+    el10.style.transform = `translate(${x / 280}px, ${y / 200}px) scale(0.65)`;
+    el11.style.transform = `translate(${x / 120}px, ${y / 60}px) scale(0.65)`;
+    el12.style.transform = `translate(${x / -100}px, ${y / -200}px) scale(0.65)`;
+    el13.style.transform = `translate(${x / 150}px, ${y / 150}px) scale(0.65)`;
+    el14.style.transform = `translate(${x / 100}px, ${y / -100}px) scale(0.65)`;
+    el15.style.transform = `translate(${x / -100}px, ${y / 30}px) scale(0.65)`;
+    el16.style.transform = `translate(${x / 120}px, ${y / 100}px) scale(0.65)`;
+    el17.style.transform = `translate(${x / -150}px, ${y / 200}px) scale(0.65)`;
+    el18.style.transform = `translate(${x / -80}px, ${y / 120}px) scale(0.65)`;
+  }
 });
+// });
 const mq2 = window.matchMedia('screen and (min-width: 2300px)');
 addEventListener('resize', () => {
   addEventListener('mousemove', e => {
