@@ -56,6 +56,63 @@ body {
   &.dark {
     color: #eee;
     background-color: $colorBlack;
+    .mainContainer {
+      .mainFixedBar {
+        &.on {
+          border-right: 1px #aaa solid;
+        }
+      }
+      .mainContents {
+        .mainWork {
+          .swiper {
+            .swiper-slide {
+              a {
+                img {
+                  box-shadow: 0px 0px 2.2px -22px rgba(255, 255, 255, 0.042),
+                    0px 0px 5.3px -22px rgba(255, 255, 255, 0.061),
+                    0px 0px 10px -22px rgba(255, 255, 255, 0.075),
+                    0px 0px 17.9px -22px rgba(255, 255, 255, 0.089),
+                    0px 0px 33.4px -22px rgba(255, 255, 255, 0.108),
+                    0px 0px 80px -22px rgba(255, 255, 255, 0.15);
+                }
+              }
+              .desWrapper {
+                .projectNum {
+                  color: #aaa;
+                }
+                .projectTitle {
+                  color: #ddd;
+                }
+                a {
+                  button {
+                    &:hover {
+                      color: #fff;
+                      background-color: $colorBlack;
+                      border: 1px #eee solid;
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+              color: #eee;
+            }
+            .swiper-pagination-bullet {
+              color: #eee;
+              opacity: 1;
+              background: $colorBlack;
+              border: 1px #eee solid;
+            }
+            .swiper-pagination-bullet-active {
+              color: $colorBlack;
+              background: #eee;
+            }
+          }
+        }
+      }
+    }
   }
   h3 {
     font-size: 60px;
@@ -139,13 +196,25 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      img {
+      .moon {
         width: 60%;
+      }
+      .sun {
+        width: 70%;
+        display: none;
       }
     }
     &.on {
       background-color: #12121286;
       border: $borderWhite;
+    }
+    &.lightMode {
+      .moon {
+        display: none;
+      }
+      .sun {
+        display: block;
+      }
     }
   }
   header {
@@ -480,6 +549,7 @@ body {
         &.on {
           border-right: $borderBlack;
         }
+
         .mainFixedBarWarpper {
           height: 100%;
           display: flex;
@@ -810,6 +880,17 @@ body {
             &.dark {
               background: url(./images/mainSkillsB.svg) no-repeat 50% / cover;
               color: #eee;
+              li {
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 23%;
+                  left: 0;
+                  width: 20px;
+                  height: 20px;
+                  background: url(./images/fileW.svg) no-repeat 50% / cover;
+                }
+              }
             }
           }
           .js {
@@ -866,6 +947,17 @@ body {
             &.dark {
               background: url(./images/mainSkills2B.svg) no-repeat 50% / cover;
               color: #eee;
+              li {
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 23%;
+                  left: 0;
+                  width: 20px;
+                  height: 20px;
+                  background: url(./images/fileW.svg) no-repeat 50% / cover;
+                }
+              }
             }
           }
           .graphics {
@@ -932,6 +1024,19 @@ body {
             &.dark {
               background: url(./images/mainSkills3B.svg) no-repeat 50% / cover;
               color: #eee;
+              .graphicDes {
+                li {
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    top: 23%;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    background: url(./images/fileW.svg) no-repeat 50% / cover;
+                  }
+                }
+              }
             }
           }
           .git {

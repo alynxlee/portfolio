@@ -61,6 +61,38 @@ body.dark {
   color: #eee;
   background-color: #121212;
 }
+body.dark .mainContainer .mainFixedBar.on {
+  border-right: 1px #aaa solid;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-slide a img {
+  box-shadow: 0px 0px 2.2px -22px rgba(255, 255, 255, 0.042), 0px 0px 5.3px -22px rgba(255, 255, 255, 0.061), 0px 0px 10px -22px rgba(255, 255, 255, 0.075), 0px 0px 17.9px -22px rgba(255, 255, 255, 0.089), 0px 0px 33.4px -22px rgba(255, 255, 255, 0.108), 0px 0px 80px -22px rgba(255, 255, 255, 0.15);
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectNum {
+  color: #aaa;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectTitle {
+  color: #ddd;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a button:hover {
+  color: #fff;
+  background-color: #121212;
+  border: 1px #eee solid;
+  cursor: pointer;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-button-prev,
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-button-next {
+  color: #eee;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet {
+  color: #eee;
+  opacity: 1;
+  background: #121212;
+  border: 1px #eee solid;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet-active {
+  color: #121212;
+  background: #eee;
+}
 body h3 {
   font-size: 60px;
   font-weight: 700;
@@ -138,12 +170,22 @@ body .darkMode .darkToggle {
   align-items: center;
   justify-content: center;
 }
-body .darkMode .darkToggle img {
+body .darkMode .darkToggle .moon {
   width: 60%;
+}
+body .darkMode .darkToggle .sun {
+  width: 70%;
+  display: none;
 }
 body .darkMode.on {
   background-color: rgba(18, 18, 18, 0.5254901961);
   border: #fff solid 1px;
+}
+body .darkMode.lightMode .moon {
+  display: none;
+}
+body .darkMode.lightMode .sun {
+  display: block;
 }
 body header {
   width: 100%;
@@ -756,6 +798,15 @@ body main .mainContainer .mainContents .mainSkills .skills.dark {
   background: url(./images/mainSkillsB.svg) no-repeat 50%/cover;
   color: #eee;
 }
+body main .mainContainer .mainContents .mainSkills .skills.dark li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/fileW.svg) no-repeat 50%/cover;
+}
 body main .mainContainer .mainContents .mainSkills .js {
   margin-top: 40px;
   background: url(./images/mainSkills2.svg) no-repeat 50%/cover;
@@ -806,6 +857,15 @@ body main .mainContainer .mainContents .mainSkills .js:hover li::before {
 body main .mainContainer .mainContents .mainSkills .js.dark {
   background: url(./images/mainSkills2B.svg) no-repeat 50%/cover;
   color: #eee;
+}
+body main .mainContainer .mainContents .mainSkills .js.dark li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/fileW.svg) no-repeat 50%/cover;
 }
 body main .mainContainer .mainContents .mainSkills .graphics {
   margin-top: 40px;
@@ -863,6 +923,15 @@ body main .mainContainer .mainContents .mainSkills .graphics:hover .graphicDes l
 body main .mainContainer .mainContents .mainSkills .graphics.dark {
   background: url(./images/mainSkills3B.svg) no-repeat 50%/cover;
   color: #eee;
+}
+body main .mainContainer .mainContents .mainSkills .graphics.dark .graphicDes li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/fileW.svg) no-repeat 50%/cover;
 }
 body main .mainContainer .mainContents .mainSkills .git {
   transition: 0.3s;

@@ -13,6 +13,29 @@ const dark = document.querySelector('.darkMode');
 const skills = document.querySelectorAll('.mainSkills .skills');
 const jsBg = document.querySelector('.mainSkills .js');
 const graphicsBg = document.querySelector('.mainSkills .graphics');
+const menuWork = document.querySelector('#gnb li a.work');
+const menuAbout = document.querySelector('#gnb li a.about');
+const mainWork = document.querySelector('.mainWork');
+const mainAbout = document.querySelector('.mainAbout');
+
+// 메뉴 누르면 해당 영역으로 이동
+menuWork.addEventListener('click', e => {
+  e.preventDefault();
+  const getWork = mainWork.offsetTop + mainContainer.offsetTop;
+  scrollTo({
+    top: getWork,
+    behavior: 'smooth',
+  });
+});
+
+menuAbout.addEventListener('click', e => {
+  e.preventDefault();
+  const getAbout = mainAbout.offsetTop + mainContainer.offsetTop;
+  scrollTo({
+    top: getAbout,
+    behavior: 'smooth',
+  });
+});
 
 // footer에서 버튼 이동
 let ftOffsetTop = footer.offsetTop;
@@ -47,6 +70,7 @@ dark.addEventListener('click', e => {
   jsBg.classList.toggle('dark');
   graphicsBg.classList.toggle('dark');
   contactBtn.classList.toggle('dark');
+  dark.classList.toggle('lightMode');
 });
 
 // smooth behavior
