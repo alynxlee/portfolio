@@ -572,17 +572,7 @@ body {
           }
           div {
             margin: 0 auto;
-            /*.pfProcess {
-              font-size: 16px;
-              width: 245px;
-              height: 50px;
-              line-height: 50px;
-              text-align: center;
-              margin-bottom: 15px;
-              border: $borderBlack;
-              border-radius: 50px;
-              transition: 0.8s;
-            }*/
+
             .contactBtn {
               background-color: $colorBlack;
               color: #fff;
@@ -627,7 +617,27 @@ body {
         margin-top: 120px;
         .mainWork {
           margin-top: 71px;
-
+          .titleWrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 400px;
+            .pfProcess {
+              margin-top: 2px;
+              font-size: 14px;
+              width: 170px;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              border: $borderBlack;
+              border-radius: 50px;
+              transition: 0.6s;
+              &:hover {
+                background-color: $colorBlack;
+                color: #fff;
+              }
+            }
+          }
           .swiper {
             margin: 0 auto;
             width: 100%;
