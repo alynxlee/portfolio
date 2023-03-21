@@ -1,5 +1,8 @@
 # 👩🏻‍💻 포트폴리오 작업일지
 
+<br/>
+<br/>
+
 ## 🎯 프로젝트 목표
 
 시각적으로 보기 좋은 사이트를 만들고, 프론트엔드 개발자로서 발전하는 계기가 된다.
@@ -92,7 +95,7 @@ body {
 
 ## 🛠 사용 기술
 
-[제목 없음](https://www.notion.so/8589ec5e01a7417f97982d4e94a90576)
+![skill.PNG](https://alynxlee.github.io/portfolio/images/readme/skill.png)
 
 ## 📚 페이지 구성
 
