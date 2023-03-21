@@ -1,102 +1,106 @@
 # 👩🏻‍💻 포트폴리오 작업일지
 
----
-
-- **목차**
-
 ## 🎯 프로젝트 목표
-
----
 
 시각적으로 보기 좋은 사이트를 만들고, 프론트엔드 개발자로서 발전하는 계기가 된다.
 
 ## 📋 코딩 컨벤션
 
----
+**파일 및 폴더 분류**
 
-- 펼쳐보기
-  **파일 및 폴더 분류**
-  1. 파일 및 폴더명은 소문자로 작성
-  2. 메인 페이지명은 index, 서브페이지명은 project로 작성
-  _ex) index.html / project1.html / project2.html …_
-  1. 폴더는 html, css, js, images, common로 분류
-  - common폴더 내부에는 전역으로 설정하는 파일 생성 (reset.css, font.css …)
-  - images 폴더 하위에는 각각의 페이지 별로 폴더 생성.
-  **Stylesheet / Script**
-  1. reset 파일은 minireset.min.css 파일 수정 후 사용
-  2. 폰트는 fonts.css 파일 사용
-  3. style.css와 js 파일 생성 시, html의 이름으로 생성
-  _ex) index.html / index.css / index.js_
-  **네이밍**
-  1. html, css, js의 id명, class명, 변수명은 카멜표기법으로 작성
-  _ex) toggleBtn_
-  1. querySelectorAll을 사용하여 노드를 반환할 때의 변수명은 s를 붙여 복수형으로 작성
-  2. html의 body 구조는 header, main, footer로 작성
-  - 작성 시 가독성을 위해 주석으로 구분
-  - 사이트 전체 메뉴는 header - nav - ul#gnb로 작성
-  - main은 article로 구분 후, 클래스 혹은 아이디명 main\_(index 페이지 소제목)으로 작성
+1. 파일 및 폴더명은 소문자로 작성
+2. 메인 페이지명은 index, 서브페이지명은 project로 작성
+   _ex) index.html / project1.html / project2.html …_
+3. 폴더는 html, css, js, images, common로 분류
 
-    _ex) main_work_
-  1. index페이지의 이미지 파일 이름은 main메뉴명1.jpg 형식으로 작성
-  2. 프로젝트의 이미지 파일 이름은 img1.jpg로 작성
-  **식 / 구문**
-  1. 기본적인 작성 방식은 prettier 작성 방식을 따름
-  2. 들여쓰기 : tab을 사용한 들여쓰기 (tap 사이즈는 2로 설정)
-  3. 키워드, 연산자와 다른 코드 사이에 공백 작성
-  ```jsx
-  const total = (a, b, c = 5) => console.log(a + b + c);
-  total(10, 5); // X
-  const total = (a, b, c = 5) => console.log(a + b + c);
-  total(10, 5); // O
-  ```
-  1. 괄호의 위치는 K&R 스타일로 작성
-  - 여는 블록을 첫 줄 마지막에 사용하고 닫는 블록은 새 줄에 작성
-  1. Scss 스타일 속성 작성 시, 한 줄에 하나의 스타일 속성 작성
-  ```scss
-  /* X */
-  body {
-    height: 100vh;
-    background-color: #15264b;
-    color: #fff;
-    overflow: hidden;
-  }
+- common폴더 내부에는 전역으로 설정하는 파일 생성 (reset.css, font.css …)
+- images 폴더 하위에는 각각의 페이지 별로 폴더 생성.
+  <br>
 
-  /* O */
-  body {
-    height: 100vh;
-    background-color: #15264b;
-    color: #fff;
-    overflow: hidden;
-  }
-  ```
-  1. js 변수 선언 시
-  - const 또는 let 사용
-  - 가급적 화살표 함수 사용 문자열
-  - 선언 시, 백틱( ` )을 쓰지 않는 경우 작은 따옴표 사용
+**Stylesheet / Script**
+
+1. reset 파일은 minireset.min.css 파일 수정 후 사용
+2. 폰트는 fonts.css 파일 사용
+3. style.css와 js 파일 생성 시, html의 이름으로 생성
+   _ex) index.html / index.css / index.js_
+   <br>
+
+**네이밍**
+
+1. html, css, js의 id명, class명, 변수명은 카멜표기법으로 작성
+   _ex) toggleBtn_
+2. querySelectorAll을 사용하여 노드를 반환할 때의 변수명은 s를 붙여 복수형으로 작성
+3. html의 body 구조는 header, main, footer로 작성
+
+- 작성 시 가독성을 위해 주석으로 구분
+- 사이트 전체 메뉴는 header - nav - ul#gnb로 작성
+- main은 article로 구분 후, 클래스 혹은 아이디명 main\_(index 페이지 소제목)으로 작성
+
+  _ex) main_work_
+
+4. index페이지의 이미지 파일 이름은 main메뉴명1.jpg 형식으로 작성
+
+5. 프로젝트의 이미지 파일 이름은 img1.jpg로 작성
+   <br>
+
+**식 / 구문**
+
+1. 기본적인 작성 방식은 prettier 작성 방식을 따름
+2. 들여쓰기 : tab을 사용한 들여쓰기 (tap 사이즈는 2로 설정)
+3. 키워드, 연산자와 다른 코드 사이에 공백 작성
+
+```jsx
+const total = (a, b, c = 5) => console.log(a + b + c);
+total(10, 5); // X
+const total = (a, b, c = 5) => console.log(a + b + c);
+total(10, 5); // O
+```
+
+4. 괄호의 위치는 K&R 스타일로 작성
+
+- 여는 블록을 첫 줄 마지막에 사용하고 닫는 블록은 새 줄에 작성
+
+5. Scss 스타일 속성 작성 시, 한 줄에 하나의 스타일 속성 작성
+
+```scss
+/* X */
+body {
+  height: 100vh;
+  background-color: #15264b;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* O */
+body {
+  height: 100vh;
+  background-color: #15264b;
+  color: #fff;
+  overflow: hidden;
+}
+```
+
+6. js 변수 선언 시
+
+- const 또는 let 사용
+- 가급적 화살표 함수 사용 문자열
+- 선언 시, 백틱( ` )을 쓰지 않는 경우 작은 따옴표 사용
 
 ## 📂 디렉터리 구조
 
----
-
-![directory.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bcc44144-9245-43fa-9e17-f0da39981753/directory.png)
+![directory.PNG](https://alynxlee.github.io/portfolio/images/readme/directory.png)
 
 ## 🛠 사용 기술
-
----
 
 [제목 없음](https://www.notion.so/8589ec5e01a7417f97982d4e94a90576)
 
 ## 📚 페이지 구성
-
----
 
 ## 🖥 Main
 
 프로젝트 상세 페이지를 제외한 모든 페이지를 스크롤로 이동할 수 있도록 제작
 
 ### 📌 **Title Section**
-
----
 
 ![ezgif.com-optimize (2).gif](<https://s3-us-west-2.amazonaws.com/secure.notion-static.com/173a1365-6dc4-40b0-9a3d-c2b9a363ff9d/ezgif.com-optimize_(2).gif>)
 
