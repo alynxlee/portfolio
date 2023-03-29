@@ -1,11 +1,12 @@
 # 👩🏻‍💻 포트폴리오 작업일지
 
 <br/>
-<br/>
 
 ## 🎯 프로젝트 목표
 
 시각적으로 보기 좋은 사이트를 만들고, 프론트엔드 개발자로서 발전하는 계기가 된다.
+
+<br/>
 
 ## 📋 코딩 컨벤션
 
@@ -13,25 +14,27 @@
 
 1. 파일 및 폴더명은 소문자로 작성
 2. 메인 페이지명은 index, 서브페이지명은 project로 작성
-   _ex) index.html / project1.html / project2.html …_
+   <span style="color:#FA5858">_ex) index.html / project1.html / project2.html …_</span>
 3. 폴더는 html, css, js, images, common로 분류
 
 - common폴더 내부에는 전역으로 설정하는 파일 생성 (reset.css, font.css …)
 - images 폴더 하위에는 각각의 페이지 별로 폴더 생성.
-  <br>
+
+<br/>
 
 **Stylesheet / Script**
 
 1. reset 파일은 minireset.min.css 파일 수정 후 사용
 2. 폰트는 fonts.css 파일 사용
 3. style.css와 js 파일 생성 시, html의 이름으로 생성
-   _ex) index.html / index.css / index.js_
-   <br>
+   <span style="color:#FA5858">_ex) index.html / index.css / index.js_</span>
+
+<br/>
 
 **네이밍**
 
 1. html, css, js의 id명, class명, 변수명은 카멜표기법으로 작성
-   _ex) toggleBtn_
+   <span style="color:#FA5858">_ex) toggleBtn_</span>
 2. querySelectorAll을 사용하여 노드를 반환할 때의 변수명은 s를 붙여 복수형으로 작성
 3. html의 body 구조는 header, main, footer로 작성
 
@@ -39,12 +42,13 @@
 - 사이트 전체 메뉴는 header - nav - ul#gnb로 작성
 - main은 article로 구분 후, 클래스 혹은 아이디명 main\_(index 페이지 소제목)으로 작성
 
-  _ex) main_work_
+  <span style="color:#FA5858">_ex) main_work_</span>
 
 4. index페이지의 이미지 파일 이름은 main메뉴명1.jpg 형식으로 작성
 
 5. 프로젝트의 이미지 파일 이름은 img1.jpg로 작성
-   <br>
+
+<br/>
 
 **식 / 구문**
 
@@ -89,19 +93,27 @@ body {
 - 가급적 화살표 함수 사용 문자열
 - 선언 시, 백틱( ` )을 쓰지 않는 경우 작은 따옴표 사용
 
+<br/>
+
 ## 📂 디렉터리 구조
 
 ![directory.PNG](https://alynxlee.github.io/portfolio/images/readme/directory.png)
 
+<br/>
+
 ## 🛠 사용 기술
 
 ![skill.PNG](https://alynxlee.github.io/portfolio/images/readme/skill.png)
+
+<br/>
 
 ## 📚 페이지 구성
 
 ## 🖥 Main
 
 프로젝트 상세 페이지를 제외한 모든 페이지를 스크롤로 이동할 수 있도록 제작
+
+<br/>
 
 ### 📌 **Title Section**
 
@@ -123,9 +135,9 @@ body {
 
 메뉴 클릭 시 해당 영역으로 이동
 
-### 📌 Work **Section**
+<br/>
 
----
+### 📌 Work **Section**
 
 ![sideBar.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/71165911-d2ac-4799-9e51-b9eed5038b50/sideBar.gif)
 
@@ -137,9 +149,9 @@ body {
 
 > **Swiper를 사용한 슬라이드**
 
-### 📌 About **Section**
+<br/>
 
----
+### 📌 About **Section**
 
 ![skills.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/efb64442-8cd4-402d-b7c5-0d2894385e56/skills.gif)
 
@@ -147,9 +159,9 @@ body {
 
 스크롤 시 차례대로 올라오는 움직임 구현
 
-### 📌 Contact **Section**
+<br/>
 
----
+### 📌 Contact **Section**
 
 ![clipPath.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e9df30da-2c13-4427-bcc9-47b2ef958639/clipPath.gif)
 
@@ -157,9 +169,9 @@ body {
 
 마우스 커서가 지나가는 부분만 blur 해제
 
-### 📌 Dark Mode
+<br/>
 
----
+### 📌 Dark Mode
 
 ![dark.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ba6d36c9-ac01-4257-a8bc-454945bdc6a1/dark.gif)
 
@@ -168,11 +180,13 @@ body {
 - 🌙 아이콘을 누르면 다크모드 실행
 - ☀ 아이콘을 누르면 라이트모드 실행
 
+<br/>
+
 ## 🖥 Project page
 
-## 🔍 문제 및 해결
+<br/>
 
----
+## 🔍 문제 및 해결
 
 ### 왜 내가 원하는 영역으로 이동 되지 않을까?
 
@@ -198,6 +212,8 @@ const getWork = mainWork.offsetTop + mainContainer.offsetTop;
 
 </aside>
 
+<br/>
+
 ### 사이드바… 제발 움직이지 말아 줘
 
 <aside>
@@ -214,6 +230,8 @@ const getWork = mainWork.offsetTop + mainContainer.offsetTop;
 **사이드바의 부모 요소**에 overflow 속성이 있는지 확인해보았지만 없었고, **height 값을 설정해주니 바로 고정이 되었다.** 부모의 height 값만큼 sticky가 실행된다고 한다.
 
 </aside>
+
+<br/>
 
 ### 브라우저 창이 커지면 한 쪽으로 쏠려요
 
@@ -251,6 +269,8 @@ const getWork = mainWork.offsetTop + mainContainer.offsetTop;
 								.
 ```
 
+<br/>
+
 JavaScript에서도 matchMedia를 이용하여 scale 값을 바꿔주었다.
 
 ```jsx
@@ -270,16 +290,14 @@ addEventListener('mousemove', e => {
 
 </aside>
 
-## ✍🏻 리뷰
+<br/>
 
----
+## ✍🏻 리뷰
 
 - offsetTop, sticky 등 수업 시간에 배웠지만 제대로 이해하지 못 한 개념들을 다시 찾아보고 적용해 봄으로써 정확히 이해할 수 있는 계기가 되었다.
 
-- 포트폴리오를 제대로 만들어보기 전까지는 화려한 효과가 많은 사이트가 좋다고 생각했는데 직접 만들어보니 가독성이 좋고 심플한 것이 최고!
+- 그 전에는 화려한 효과가 많은 디자인을 선호했지만, 포트폴리오를 직접 만들어보니 심플한 디자인이 가독성이 좋고 미적으로도 좋다는 생각을 하게 되었다.
 
 ## 📎 포트폴리오 바로가기
-
----
 
 [LeeHyeJin Portfolio](https://alynxlee.github.io/portfolio/)
