@@ -1204,6 +1204,7 @@ body {
   }
 }
 
+/* mediaquery min-width: 2000px */
 @media screen and (min-width: 2000px) {
   body {
     main {
@@ -1315,6 +1316,8 @@ body {
     }
   }
 }
+
+/* mediaquery min-width: 2300px */
 @media screen and (min-width: 2300px) {
   body {
     main {
@@ -1419,6 +1422,27 @@ body {
       .mainContainer {
         .mainContents {
           width: 70vw;
+        }
+      }
+    }
+  }
+}
+
+/* mediaquery max-width: 768px */
+@media screen and (max-width: 768px) {
+  body {
+    main {
+      .mainTitle {
+        .mainTitleWrapper {
+          .titleText {
+            img {
+              display: none;
+            }
+            .mobileText {
+              display: block;
+              transform: scale(1.5) translateY(15%) translateX(5%);
+            }
+          }
         }
       }
     }
